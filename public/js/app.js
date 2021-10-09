@@ -12089,7 +12089,7 @@ function Login() {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
       className: "m-auto",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-        className: "text-3xl text-center py-10 font-bold text-purple-900",
+        className: "text-3xl text-center py-10 font-bold text-blue-900",
         children: "LOGIN"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
         className: "xl:w-5/12 lg:w-7/12 md:w-9/12 mt-3 p-10 rounded-md mx-auto md:border border-gray-500 mt-5",
@@ -12120,7 +12120,7 @@ function Login() {
               className: "col-span-12 md:col-span-4 mx-auto",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
                 type: "submit",
-                className: "w-auto py-3 px-20 md:px-10 rounded-full bg-purple-900 hover:bg-yellow-500 text-white font-bold",
+                className: "w-auto py-3 px-20 md:px-10 rounded-full bg-blue-900 hover:bg-yellow-500 text-white font-bold",
                 children: "Sign in"
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
@@ -12132,21 +12132,21 @@ function Login() {
               className: "col-span-12 md:col-span-6 mx-auto",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
                 type: "submit",
-                className: "w-auto py-3 px-20 md:px-10 rounded-full bg-yellow-500 hover:bg-purple-900 text-white font-bold",
+                className: "w-auto py-3 px-20 md:px-10 rounded-full bg-yellow-500 hover:bg-blue-900 text-white font-bold",
                 children: "Return to Store"
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
               className: "col-span-12 mx-auto mt-20 md:mt-10",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
                 href: "#",
-                className: "underline text-purple-900 hover:text-yellow-500",
+                className: "underline text-blue-900 hover:text-yellow-500",
                 children: "Forgot Your Password?"
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
               className: "col-span-12 mx-auto mt-1",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
                 href: "#",
-                className: "underline text-purple-900 hover:text-yellow-500",
+                className: "underline text-blue-900 hover:text-yellow-500",
                 children: "Create an Account"
               })
             })]
