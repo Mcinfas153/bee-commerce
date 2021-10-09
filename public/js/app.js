@@ -12092,7 +12092,7 @@ function Login() {
         className: "text-3xl text-center py-10 font-bold text-purple-900",
         children: "LOGIN"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        className: "xl:w-5/12 lg:w-7/12 md:w-9/12 mt-3 p-10 md:p-20 rounded-md mx-auto md:border border-gray-500 mt-5",
+        className: "xl:w-5/12 lg:w-7/12 md:w-9/12 mt-3 p-10 rounded-md mx-auto md:border border-gray-500 mt-5",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("form", {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
             className: "mb-2",
