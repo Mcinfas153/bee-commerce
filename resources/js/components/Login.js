@@ -5,7 +5,7 @@ export default function Login() {
         <div className="login">
             <div className="m-auto">
             <p className="text-3xl text-center py-10 font-bold text-purple-900">LOGIN</p>
-                <div className="xl:w-5/12 lg:w-7/12 md:w-9/12 mt-3 p-10 md:p-20 rounded-md mx-auto md:border border-gray-500 mt-5">
+                <div className="xl:w-5/12 lg:w-7/12 md:w-9/12 mt-3 p-10 rounded-md mx-auto md:border border-gray-500 mt-5">
                     <form>
                         <div className="mb-2">
                             <p className="mb-1 text-sm">Username</p>
@@ -32,21 +32,9 @@ export default function Login() {
                                 <a href="#" className="underline text-purple-900 hover:text-yellow-500">Create an Account</a>
                             </div>
                         </div>
-                        {/* <div className="grid grid-cols-1 md:grid-cols-2 flex items-center justify-items-center md:justify-items-stretch">
-                            <div className="">
-                                <a href="/register"><p className="text-yellow-400 text-center sm:text-left">Already have an account?</p></a>
-                            </div>
-                            <div className="">
-                                <button type="submit" className="float-right p-2.5 px-5 rounded-md bg-yellow-400 text-white mt-3 md:my-0">Submit</button>
-                            </div>
-                        </div> */}
                     </form>
                 </div>
             </div >
-            {/* <div className="grid grid-cols-3 gap-4">
-                <div className="bg-green-500 p-5 col-span-2">Div 01</div>
-                <div className="bg-green-500 p-5">Div 03</div>
-            </div> */}
         </div >
     )
 }
