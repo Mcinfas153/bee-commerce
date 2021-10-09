@@ -26,6 +26,10 @@ export default function Login() {
                     </form>
                 </div>
             </div >
+            <div className="grid grid-cols-3 gap-4">
+                <div className="bg-green-500 p-5 col-span-2">Div 01</div>
+                <div className="bg-green-500 p-5">Div 03</div>
+            </div>
         </div >
     )
 }
