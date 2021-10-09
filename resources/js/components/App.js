@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import TopBar from './TopBar';
 import Login from './Login';
 
 function App() {
     return (
         <div className="app">
+            <TopBar />
             <Login />
         </div>
     );
