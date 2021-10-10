@@ -6,12 +6,14 @@ import Login from './Login'
 import Register from './Register';
 import Home from './Home';
 import TopNav from './TopNav';
+import Navbar from './Navbar';
 
 function App() {
     return (
         <Router>
             <TopBar />
             <TopNav />
+            <Navbar />
             <div className="app">
                 <Switch>
                     <Route exact path="/">
