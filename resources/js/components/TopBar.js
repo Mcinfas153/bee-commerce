@@ -8,9 +8,9 @@ export default function TopBar() {
 
     return (
         alertShow &&
-        <div className="topbar bg-blue-900 p-2 flex flex-row flex-wrap justify-center align-items-center">
-            <p className="text-xs md:text-sm text-yellow-500 text-center">Due to the <span className="font-bold">COVID 19</span> epidemic, orders may be processed with a slight delay </p>
-            <span className="absolute top-2 md:top-1 right-2 cursor-pointer text-yellow-500" onClick={() => setAlertShow(false)}><FontAwesomeIcon icon={faTimes} /></span>
+        <div className="tw-topbar tw-bg-blue-900 tw-p-2 tw-flex tw-flex-row tw-lex-wrap tw-justify-center tw-align-items-center">
+            <p className="tw-text-xs md:tw-text-sm tw-text-yellow-500 tw-text-center">Due to the <span className="font-bold">COVID 19</span> epidemic, orders may be processed with a slight delay </p>
+            <span className="tw-absolute tw-top-2 md:tw-top-1 tw-right-2 tw-cursor-pointer tw-text-yellow-500" onClick={() => setAlertShow(false)}><FontAwesomeIcon icon={faTimes} /></span>
         </div>
     )
 }

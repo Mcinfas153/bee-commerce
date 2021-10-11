@@ -14,8 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::post('/add-user', [UserController::class, 'store'])->name('user.store');
+// Route::post('/add-user', [UserController::class, 'store'])->name('user.store');
+
+Route::view('/{path?}', 'welcome');

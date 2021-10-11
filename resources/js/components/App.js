@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Link, Route, Switch } from 'react-router-dom'
 import TopBar from './TopBar';
 import Login from './Login'
 import Register from './Register';
@@ -11,7 +11,7 @@ import Footer from './Footer'
 
 function App() {
     return (
-        <Router>
+        <BrowserRouter>
             <div className="app">
                 <TopBar />
                 <TopNav />
@@ -29,7 +29,7 @@ function App() {
                 </Switch>
                 <Footer />
             </div>
-        </Router>
+        </BrowserRouter>
     );
 }
 
