@@ -7,14 +7,15 @@ import Register from './Register';
 import Home from './Home';
 import TopNav from './TopNav';
 import Navbar from './Navbar';
+import Footer from './Footer'
 
 function App() {
     return (
         <Router>
-            <TopBar />
-            <TopNav />
-            <Navbar />
             <div className="app">
+                <TopBar />
+                <TopNav />
+                <Navbar />
                 <Switch>
                     <Route exact path="/">
                         <Home />
@@ -26,6 +27,7 @@ function App() {
                         <Register />
                     </Route>
                 </Switch>
+                <Footer />
             </div>
         </Router>
     );
