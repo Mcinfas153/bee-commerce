@@ -2,8 +2,42 @@ import React from 'react'
 
 export default function Footer() {
     return (
-        <div>
-
+        <div className="footer tw-mt-10 tw-bg-gray-200 tw-items-center">
+            <div className="tw-grid tw-grid-cols-12">
+                <div className="tw-col-span-12 sm:tw-col-span-6 md:tw-col-span-6 lg:tw-col-span-4 tw-px-10 tw-py-8 md:tw-py-10 md:tw-mx-auto tw-bg-gray-200">
+                    <p className="tw-text-xl md:tw-text-2xl tw-font-semibold tw-text-yellow-500 tw-pb-4">What is E-BEE?</p>
+                    <p className="tw-font-semibold tw-text-blue-900">
+                    E-BEE is a leading choice for small business merchants to easily set up a store and start selling fast. No need to abandon your existing site — E-BEE can be added virtually anywhere you have an online presence.
+                    </p>
+                </div>
+                <div className="tw-col-span-12 sm:tw-col-span-6 md:tw-col-span-6 lg:tw-col-span-3 tw-pb-8 tw-px-10 md:tw-px-10 sm:tw-py-10 lg:tw-mx-auto tw-bg-gray-200">
+                    <p className="tw-text-xl md:tw-text-2xl tw-font-semibold tw-text-yellow-500 tw-pb-4">MORE INFO</p>
+                    <ul>
+                        <li><a href="#"><p className="tw-font-semibold tw-text-blue-900 hover:tw-text-yellow-500 tw-mb-1.5">Delivery Information</p></a></li>
+                        <li><a href="#"><p className="tw-font-semibold tw-text-blue-900 hover:tw-text-yellow-500 tw-mb-1.5">Privacy Policy</p></a></li>
+                        <li><a href="#"><p className="tw-font-semibold tw-text-blue-900 hover:tw-text-yellow-500 tw-mb-1.5">Terms & Conditions</p></a></li>
+                        <li><a href="#"><p className="tw-font-semibold tw-text-blue-900 hover:tw-text-yellow-500 tw-mb-1.5">Contact Us</p></a></li>
+                    </ul>
+                </div>
+                <div className="tw-col-span-12 sm:tw-col-span-6 md:tw-col-span-6 lg:tw-col-span-2 md:tw-ml-10 tw-px-10 tw-pb-8 md:tw-px-0 lg:tw-py-10 lg:tw-mx-auto tw-bg-gray-200">
+                    <p className="tw-text-xl md:tw-text-2xl tw-font-semibold tw-text-yellow-500 tw-pb-4">YOUR DATA</p>
+                    <ul>
+                        <li><a href="#"><p className="tw-font-semibold tw-text-blue-900 hover:tw-text-yellow-500 tw-mb-1.5">My Account</p></a></li>
+                        <li><a href="#"><p className="tw-font-semibold tw-text-blue-900 hover:tw-text-yellow-500 tw-mb-1.5">My Orders</p></a></li>
+                        <li><a href="#"><p className="tw-font-semibold tw-text-blue-900 hover:tw-text-yellow-500 tw-mb-1.5">My Cart</p></a></li>
+                        <li><a href="#"><p className="tw-font-semibold tw-text-blue-900 hover:tw-text-yellow-500 tw-mb-1.5">My Wishlist</p></a></li>
+                    </ul>
+                </div>
+                <div className="tw-col-span-12 sm:tw-col-span-6 md:tw-col-span-6 lg:tw-col-span-3 tw-px-10 md:tw-px-10 lg:tw-py-10 lg:tw-mx-auto tw-bg-gray-200">
+                    <p className="tw-text-xl md:tw-text-2xl tw-font-semibold tw-text-yellow-500 tw-pb-4">CONTACT US</p>
+                    <ul>
+                        <li><a href="https://goo.gl/maps/ibD5No73BTEakwSQ9"><p className="tw-font-semibold tw-text-blue-900 hover:tw-text-yellow-500 tw-mb-1.5">Colombo 2, Sri Lanka.</p></a></li>
+                        <li><a href="mailto:contact@beeonline.xyz"><p className="tw-font-semibold tw-text-blue-900 hover:tw-text-yellow-500 tw-mb-1.5">Contact@beeonline.xyz</p></a></li>
+                        <li><a href="tel:+94772097406"><p className="tw-font-semibold tw-text-blue-900 hover:tw-text-yellow-500 tw-mb-1.5">+94-77-209-7406</p></a></li>
+                        <li><a href="tel:+94772097406"><p className="tw-font-semibold tw-text-blue-900 hover:tw-text-yellow-500 tw-mb-1.5">+94-77-209-7406</p></a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     )
 }
