@@ -3,8 +3,6 @@
 namespace Tests\Feature;
 
 use App\Models\User;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
 class UserTest extends TestCase
@@ -26,7 +24,7 @@ class UserTest extends TestCase
             'password' => $user->password
         ];
 
-        $response = $this->post(route('user.store', $userData));
+        $response = $this->post(route('user.create', $userData));
 
         $response
             ->assertStatus(200)
@@ -38,5 +36,23 @@ class UserTest extends TestCase
                     'id',
                 ]
             ]);
+    }
+
+    public function test_user_login()
+    {
+        $user = User::factory()->create();
+
+        $userData = [
+            'email' => $user->email,
+            'password' => $user->password
+        ];
+
+        $response = $this->post(route('user.login'), $userData);
+
+        $response->assertStatus(200)
+        ->assertJsonStructure([
+            'status',
+            'user'
+        ]);
     }
 }
