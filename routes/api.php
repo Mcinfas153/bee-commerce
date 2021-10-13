@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\Api\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +15,5 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::post('/add-user', [UserController::class, 'store'])->name('user.store.api');
+Route::post('/register', [UserController::class, 'store'])->name('user.create');
+Route::post('/login', [UserController::class, 'login'])->name('user.login');
