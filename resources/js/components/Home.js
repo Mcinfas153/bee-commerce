@@ -1,10 +1,10 @@
 import React from 'react'
-import TopBar from './TopBar';
+import CategoryBox from './CategoryBox'
 
 export default function Home() {
     return (
         <div>
-
+            <CategoryBox />
         </div>
     )
 }
