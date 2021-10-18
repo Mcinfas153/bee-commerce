@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\CategoryController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\UserController;
@@ -17,3 +18,4 @@ use App\Http\Controllers\Api\UserController;
 
 Route::post('/register', [UserController::class, 'store'])->name('user.create');
 Route::post('/login', [UserController::class, 'login'])->name('user.login');
+Route::get('/categories', [CategoryController::class, 'index'])->name('category.index');
