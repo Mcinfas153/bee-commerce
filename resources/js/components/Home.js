@@ -1,11 +1,12 @@
 import React from 'react'
 import CategoryBar from './category/CategoryBar'
 import CategoryBox from './category/CategoryBox'
+import ProductPage from './ProductPage';
 
 export default function Home() {
     return (
         <div>
-            <CategoryBar />
+            {/* <CategoryBar />
             <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-3 gap-2 tw-mb-10 tw-my-8 lg:tw-container lg:tw-mx-auto">
                 <div>
                     <CategoryBox name="Electronics" />
@@ -16,7 +17,8 @@ export default function Home() {
                 <div>
                     <CategoryBox name="Clothing" />
                 </div>
-            </div>
+            </div> */}
+            <ProductPage />
         </div>
     )
 }
