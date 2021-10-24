@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom'
 import TopBar from './TopBar';
@@ -8,28 +8,37 @@ import Home from './Home';
 import TopNav from './TopNav';
 import Navbar from './Navbar';
 import Footer from './Footer'
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunkMiddleware from 'redux-thunk'
+import rootReducer from './admin/store/reducers/RootReducer';
+
+
+const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
 
 function App() {
     return (
-        <BrowserRouter>
-            <div className="app">
-                <TopBar />
-                <TopNav />
-                <Navbar/>
-                <Switch>
-                    <Route exact path="/">
-                        <Home />
-                    </Route>
-                    <Route path="/login">
-                        <Login />
-                    </Route>
-                    <Route path="/register">
-                        <Register />
-                    </Route>
-                </Switch>
-                <Footer />
-            </div>
-        </BrowserRouter>
+        <Provider store={store}>
+            <BrowserRouter>
+                <div className="app">
+                    <TopBar />
+                    <TopNav />
+                    <Navbar />
+                    <Switch>
+                        <Route exact path="/">
+                            <Home />
+                        </Route>
+                        <Route path="/login">
+                            <Login />
+                        </Route>
+                        <Route path="/register">
+                            <Register />
+                        </Route>
+                    </Switch>
+                    <Footer />
+                </div>
+            </BrowserRouter>
+        </Provider>
     );
 }
 
