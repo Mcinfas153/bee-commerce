@@ -8,6 +8,7 @@ import Home from './Home';
 import TopNav from './TopNav';
 import Navbar from './Navbar';
 import Footer from './Footer'
+import ShoppingCart from './admin/store/ShoppingCart';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk'
@@ -33,6 +34,9 @@ function App() {
                         </Route>
                         <Route path="/register">
                             <Register />
+                        </Route>
+                        <Route path="/cart">
+                            <ShoppingCart />
                         </Route>
                     </Switch>
                     <Footer />
