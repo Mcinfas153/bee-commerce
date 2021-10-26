@@ -58,8 +58,8 @@ export function CategoryBar(props) {
                 <Slider {...settings}>
                     {
                         categories.map(category =>
-                            <div>
-                                <CategoryRound key={category?.id} name={category?.name} image={category?.image_url} />
+                            <div key={category?.id}>
+                                <CategoryRound name={category?.name} image={category?.image_url} />
                             </div>
                         )
                     }

@@ -9,7 +9,7 @@ export default function TopNav() {
             <div className="tw-col-span-full md:tw-col-span-2 tw-flex tw-justify-center md:tw-justify-start tw-items-center tw-gap-3">
                 <Link to="/" className="tw-flex gap-2">
                     <img src="../images/bee.png" className="tw-w-10" />
-                    <span className="tw-text-center tw-uppercase tw-text-blue-900 tw-font-extrabold tw-text-3xl"><a className="text-blue-900">E</a>-<a className="tw-text-yellow-500">BEE</a></span>
+                    <span className="tw-text-center tw-uppercase tw-text-blue-900 tw-font-extrabold tw-text-3xl"><span className="text-blue-900">E</span>-<span className="tw-text-yellow-500">BEE</span></span>
                 </Link>
             </div>
             <div className="tw-col-span-full md:tw-col-span-7 tw-flex tw-flex-col md:tw-flex-row md:tw-flex tw-justify-center md:tw-justify-center tw-items-center tw-gap-5 tw-mt-5 md:tw-mt-0">
