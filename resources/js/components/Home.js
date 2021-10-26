@@ -1,7 +1,6 @@
 import React from 'react'
 import CategoryBar from './category/CategoryBar'
 import CategoryBox from './category/CategoryBox'
-import ProductPage from './ProductPage';
 
 export default function Home() {
     return (
