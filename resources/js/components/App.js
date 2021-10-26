@@ -8,7 +8,7 @@ import Home from './Home';
 import TopNav from './TopNav';
 import Navbar from './Navbar';
 import Footer from './Footer'
-import ShoppingCart from './admin/store/ShoppingCart';
+import ShoppingCart from './admin/cart/ShoppingCart'
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk'
