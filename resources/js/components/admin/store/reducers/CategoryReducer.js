@@ -14,7 +14,6 @@ const initialState = {
 };
 
 const categoryReducer = function (state = initialState, action) {
-    console.log(action.data)
     switch (action.type) {
         case LIST_CATEGORIES:
             return {

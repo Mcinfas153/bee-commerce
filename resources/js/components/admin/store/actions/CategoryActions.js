@@ -7,7 +7,6 @@ export function listCategories(page) {
         dispatch({
             type: LIST_CATEGORIES
         });
-        console.log('triger')
         axios.get('/api/categories')
             .then(function (response) {
                 dispatch({

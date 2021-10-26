@@ -15,7 +15,7 @@ export default function TopNav() {
                 <input type="text" className="tw-bg-gray-100 focus:tw-bg-white tw-rounded-full tw-py-2 tw-px-10 searchInput" placeholder="Search for products..." />
             </div>
             <div className="tw-col-span-full md:tw-col-span-3 tw-hidden md:tw-flex tw-justify-center md:tw-justify-end tw-items-center tw-gap-5 tw-mt-5 md:tw-mt-0">
-                <span className="tw-cursor-pointer tw-text-yellow-500 hover:tw-text-blue-900 tw-text-lg"><FontAwesomeIcon icon={faUser} /></span>
+                <Link to="/my-account"><span className="tw-cursor-pointer tw-text-yellow-500 hover:tw-text-blue-900 tw-text-lg"><FontAwesomeIcon icon={faUser} /></span></Link>
                 <span className="tw-cursor-pointer tw-text-yellow-500 hover:tw-text-blue-900 tw-text-lg"><FontAwesomeIcon icon={faHeart} /></span>
                 <Link to="/cart"><span className="tw-cursor-pointer tw-text-yellow-500 hover:tw-text-blue-900 tw-text-lg"><FontAwesomeIcon icon={faShoppingCart} /></span></Link>
                 <span className="tw-cursor-pointer tw-text-yellow-500 hover:tw-text-blue-900 tw-text-lg"><FontAwesomeIcon icon={faSignal} /></span>
