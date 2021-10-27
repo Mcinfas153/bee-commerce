@@ -73,7 +73,6 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         listCategories: () => dispatch(listCategories()),
-        test: () => dispatch(test())
     }
 };
 

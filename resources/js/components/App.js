@@ -22,7 +22,7 @@ function App() {
     return (
         <Provider store={store}>
             <BrowserRouter>
-                <div className="app">
+                <div className="app tw-bg-gray-100">
                     <TopBar />
                     <TopNav />
                     <Navbar />

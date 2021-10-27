@@ -28,7 +28,10 @@ export function Home(props) {
                 }
             </div>
             <div className="tw-my-5 md:tw-my-10 tw-mx-5 lg:tw-mx-10">
-                <ProductRow />
+                <ProductRow name="Clothing & Accessories" category_id={6} />
+            </div>
+            <div className="tw-my-5 md:tw-my-10 tw-mx-5 lg:tw-mx-10">
+                <ProductRow name="Electronics" category_id={7} />
             </div>
         </div>
     )
