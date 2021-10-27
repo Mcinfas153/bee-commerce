@@ -3,6 +3,7 @@ import CategoryBar from './category/CategoryBar'
 import CategoryBox from './category/CategoryBox'
 import { listCategories } from './admin/store/actions/CategoryActions';
 import { connect } from 'react-redux';
+import ProductRow from './product/ProductRow';
 
 export function Home(props) {
 
@@ -14,8 +15,10 @@ export function Home(props) {
 
     return (
         <div>
-            <CategoryBar />
-            <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-3 gap-2 tw-mb-10 tw-my-8 lg:tw-container lg:tw-mx-auto">
+            <div className="tw-my-5 tw-mx-5 lg:tw-mx-10">
+                <CategoryBar />
+            </div>
+            <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-3 gap-4 tw-my-5 tw-mx-5 lg:tw-mx-10">
                 {
                     categories.slice(0, 3).map(category => (
                         <div key={category?.id}>
@@ -23,6 +26,9 @@ export function Home(props) {
                         </div>
                     ))
                 }
+            </div>
+            <div className="tw-my-5 md:tw-my-10 tw-mx-5 lg:tw-mx-10">
+                <ProductRow />
             </div>
         </div>
     )

@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux';
 import CategoryRound from './CategoryRound';
-import { listCategories, test } from '../admin/store/actions/CategoryActions';
+import { listCategories } from '../admin/store/actions/CategoryActions';
 import Slider from "react-slick";
-// Import css files
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -53,19 +52,15 @@ export function CategoryBar(props) {
     }, [])
 
     return (
-        <div>
-            <div className="tw-my-8 tw-mx-7 lg:tw-mx-20">
-                <Slider {...settings}>
-                    {
-                        categories.map(category =>
-                            <div key={category?.id}>
-                                <CategoryRound name={category?.name} image={category?.image_url} />
-                            </div>
-                        )
-                    }
-                </Slider>
-            </div>
-        </div>
+        <Slider {...settings}>
+            {
+                categories.map(category =>
+                    <div key={category?.id}>
+                        <CategoryRound name={category?.name} image={category?.image_url} />
+                    </div>
+                )
+            }
+        </Slider>
     )
 }
 
