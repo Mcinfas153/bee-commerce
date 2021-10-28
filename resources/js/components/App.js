@@ -14,6 +14,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk'
 import rootReducer from './admin/store/reducers/RootReducer';
+import ProductPage from './product/ProductPage';
 
 
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
@@ -41,6 +42,9 @@ function App() {
                         </Route>
                         <Route path="/my-account">
                             <MyAccount />
+                        </Route>
+                        <Route path="/product/:id">
+                            <ProductPage />
                         </Route>
                     </Switch>
                     <Footer />

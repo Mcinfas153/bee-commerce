@@ -20,4 +20,4 @@ use Illuminate\Support\Facades\Route;
 
 // Route::post('/add-user', [UserController::class, 'store'])->name('user.store');
 
-Route::view('/{path?}', 'welcome');
+Route::view('/{path?}', 'welcome')->where('path', '.*');

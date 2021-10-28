@@ -55,7 +55,7 @@ export function ProductRow(props) {
             <p className="tw-text-xl tw-font-bold tw-uppercase tw-tracking-wide tw-mb-3">{name}</p>
             <Slider {...settings}>
                 {
-                    products.map(product => <ProductBox key={product?.id} name={product?.title} price={product?.price} image={product?.picture_url} />)
+                    products.map(product => <ProductBox key={product?.id} id={product?.id} name={product?.title} price={product?.price} image={product?.picture_url} />)
                 }
             </Slider>
         </div>
