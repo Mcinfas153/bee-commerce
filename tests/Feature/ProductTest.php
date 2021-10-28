@@ -22,4 +22,16 @@ class ProductTest extends TestCase
             'products'
         ]);
     }
+
+    public function test_product_details()
+    {
+        $id = rand(1, 200);
+
+        $response = $this->json('GET', '/api/product/'.$id);
+
+        return $response->assertStatus(200)
+        ->assertJsonStructure([
+            'product'
+        ]);
+    }
 }

@@ -21,3 +21,4 @@ Route::post('/login', [UserController::class, 'login'])->name('user.login');
 Route::get('/categories', [CategoryController::class, 'index'])->name('category.index');
 Route::get('/products', [ProductController::class, 'index'])->name('products.list');
 Route::get('/category/{id}/products', [CategoryController::class, 'products'])->name('category.prducts');
+Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show');
