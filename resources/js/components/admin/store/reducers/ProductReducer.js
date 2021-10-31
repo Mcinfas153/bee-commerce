@@ -1,12 +1,15 @@
-import { LIST_PRODUCTS, LIST_PRODUCTS_SUCCESS, LIST_PRODUCTS_FAILURE } from "../actionTypes/ProductTypes";
+import { LIST_PRODUCTS, LIST_PRODUCTS_SUCCESS, LIST_PRODUCTS_FAILURE, SHOW_PRODUCT, SHOW_PRODUCT_FAILURE, SHOW_PRODUCT_SUCCESS } from "../actionTypes/ProductTypes";
+
 
 const initialState = {
     products: [],
-    success_message: "",
-    error_message: "",
-    validation_errors: null,
+    product: {
+        id: '',
+        title: '',
+        description: '',
+        price: ''
+    },
     list_spinner: false,
-    create_update_spinner: false
 };
 
 const productReducer = function (state = initialState, action) {
@@ -20,13 +23,28 @@ const productReducer = function (state = initialState, action) {
             return {
                 ...state,
                 products: action.data,
-                list_spinner: true
+                list_spinner: false
             };
         case LIST_PRODUCTS_FAILURE:
             return {
                 ...state,
-                error_message: action.error,
+                list_spinner: false
+            };
+        case SHOW_PRODUCT:
+            return {
+                ...state,
                 list_spinner: true
+            };
+        case SHOW_PRODUCT_SUCCESS:
+            return {
+                ...state,
+                product: action.data,
+                list_spinner: false
+            };
+        case SHOW_PRODUCT_FAILURE:
+            return {
+                ...state,
+                list_spinner: false
             };
         default:
             return state;

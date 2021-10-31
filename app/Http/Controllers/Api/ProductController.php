@@ -20,7 +20,7 @@ class ProductController extends Controller
 
     public function show($id)
     {
-        $product = DB::table('products')->where('id', $id)->get();
+        $product = Product::find($id);
 
         return response()->json([
             'product' => $product,

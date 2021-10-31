@@ -1,23 +1,26 @@
 import React from 'react'
 
-export default function ProductInfo() {
+export default function ProductInfo(props) {
+
+    const { title, description, price } = props.info
+
     return (
         <div className="productInfo">
             <div className="tw-container tw-mx-auto tw-px-5 sm:tw-px-10">
-                <p className="tw-text-3xl tw-font-bold tw-text-blue-900 tw-my-3">Product Title</p>
-                <hr className="tw-w-16 tw-mb-5"/>
+                <p className="tw-text-3xl tw-font-bold tw-text-blue-900 tw-my-3">{title}</p>
+                <hr className="tw-w-16 tw-mb-5" />
                 <p className="tw-text-blue-900 tw-my-3">
-                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered altevration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                    {description}
                 </p>
                 <ul className="tw-my-5">
-                    <li className="d-flex tw-my-1 tw-text-blue-900 tw-font-semibold"><img src="https://img.icons8.com/emoji/20/000000/check-mark-emoji.png" className="tw-mr-2"/> Study history up to 30 days</li>
-                    <li className="d-flex tw-my-1 tw-text-blue-900 tw-font-semibold"><img src="https://img.icons8.com/emoji/20/000000/check-mark-emoji.png" className="tw-mr-2"/> Up to 5 users simultaneously</li>
-                    <li className="d-flex tw-my-1 tw-text-blue-900 tw-font-semibold"><img src="https://img.icons8.com/emoji/20/000000/check-mark-emoji.png" className="tw-mr-2"/> Has HEALTH certificate</li>
+                    <li className="d-flex tw-my-1 tw-text-blue-900 tw-font-semibold"><img src="https://img.icons8.com/emoji/20/000000/check-mark-emoji.png" className="tw-mr-2" /> Study history up to 30 days</li>
+                    <li className="d-flex tw-my-1 tw-text-blue-900 tw-font-semibold"><img src="https://img.icons8.com/emoji/20/000000/check-mark-emoji.png" className="tw-mr-2" /> Up to 5 users simultaneously</li>
+                    <li className="d-flex tw-my-1 tw-text-blue-900 tw-font-semibold"><img src="https://img.icons8.com/emoji/20/000000/check-mark-emoji.png" className="tw-mr-2" /> Has HEALTH certificate</li>
                 </ul>
                 <div className="d-flex">
-                    <p className="tw-text-2xl tw-font-bold tw-text-yellow-500 tw-m-3">$119.00</p>
+                    <p className="tw-text-2xl tw-font-bold tw-text-yellow-500 tw-m-3">{price}</p>
                     <p className="tw-text-2xl tw-font-bold tw-text-yellow-500 tw-my-3">/</p>
-                    <p className="tw-text-2xl tw-font-bold tw-text-gray-300 tw-m-3">$129.00</p>
+                    <p className="tw-text-2xl tw-font-bold tw-text-gray-300 tw-m-3">{price}</p>
                 </div>
                 <div className="lg:tw-flex tw-items-center tw-mb-2 lg:tw-mb-0">
                     <p className="tw-text-xl tw-text-blue-900 tw-font-semibold tw-m-3">Color : </p>
