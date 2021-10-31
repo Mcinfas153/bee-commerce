@@ -29,6 +29,9 @@ class CategoryTest extends TestCase
 
         $response = $this->json('GET', '/api/category/'.$id.'/products');
         
-        return $response->assertStatus(200);
+        return $response->assertStatus(200)
+        ->assertJsonStructure([
+            'products'
+        ]);
     }
 }
