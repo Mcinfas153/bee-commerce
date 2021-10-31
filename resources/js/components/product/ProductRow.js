@@ -47,7 +47,7 @@ export function ProductRow(props) {
     };
 
     useEffect(() => {
-        props.listProducts()
+        props.listProducts(category_id)
     }, [])
 
     return (
@@ -70,7 +70,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        listProducts: () => dispatch(listProducts(1)),
+        listProducts: (category_id) => dispatch(listProducts(category_id)),
     }
 };
 

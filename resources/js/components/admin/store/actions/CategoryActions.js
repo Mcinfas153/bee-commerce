@@ -1,5 +1,5 @@
 import { LIST_CATEGORIES, LIST_CATEGORIES_FAILURE, LIST_CATEGORIES_SUCCESS } from "../actionTypes/CategoryTypes";
-import axios from "axios";
+import Category from "../api/category";
 
 export function listCategories(page) {
     return function (dispatch, getState) {
@@ -7,7 +7,7 @@ export function listCategories(page) {
         dispatch({
             type: LIST_CATEGORIES
         });
-        axios.get('/api/categories')
+        Category.listAll()
             .then(function (response) {
                 dispatch({
                     type: LIST_CATEGORIES_SUCCESS,
