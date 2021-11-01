@@ -1,9 +1,16 @@
+import { USER_LOGIN } from "../actionTypes/UserTypes"
+
 const initialState = {
-    isAuthenticated: false
+    isAuthenticated: localStorage.getItem('isLogged')
 }
 
 const userReducer = (state = initialState, action) => {
-    switch (action.data) {
+    switch (action.type) {
+        case USER_LOGIN:
+            return {
+                ...state,
+                isAuthenticated: true
+            }
         default:
             return state
 
