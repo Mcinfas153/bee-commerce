@@ -1,9 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faShoppingCart, faSignal, faHeart } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faShoppingCart, faSignal, faHeart, faSignInAlt } from '@fortawesome/free-solid-svg-icons'
 
-export default function TopNav() {
+export function TopNav(props) {
+
+    const { user } = props
+
     return (
         <div className="tw-grid tw-grid-cols-12 tw-gap-1 tw-bg-white tw-px-5 tw-py-5">
             <div className="tw-col-span-full md:tw-col-span-2 tw-flex tw-justify-center md:tw-justify-start tw-items-center tw-gap-3">
@@ -17,11 +21,29 @@ export default function TopNav() {
                 <input type="text" className="tw-bg-gray-100 focus:tw-bg-white tw-rounded-full tw-py-2 tw-px-10 searchInput" placeholder="Search for products..." />
             </div>
             <div className="tw-col-span-full md:tw-col-span-3 tw-hidden md:tw-flex tw-justify-center md:tw-justify-end tw-items-center tw-gap-5 tw-mt-5 md:tw-mt-0">
-                <Link to="/my-account"><span className="tw-cursor-pointer tw-text-yellow-500 hover:tw-text-blue-900 tw-text-lg"><FontAwesomeIcon icon={faUser} /></span></Link>
-                <span className="tw-cursor-pointer tw-text-yellow-500 hover:tw-text-blue-900 tw-text-lg"><FontAwesomeIcon icon={faHeart} /></span>
-                <Link to="/cart"><span className="tw-cursor-pointer tw-text-yellow-500 hover:tw-text-blue-900 tw-text-lg"><FontAwesomeIcon icon={faShoppingCart} /></span></Link>
-                <span className="tw-cursor-pointer tw-text-yellow-500 hover:tw-text-blue-900 tw-text-lg"><FontAwesomeIcon icon={faSignal} /></span>
+                {
+                    user?.isAuthenticated ?
+                        <>
+                            <Link to="/my-account"><span className="tw-cursor-pointer tw-text-yellow-500 hover:tw-text-blue-900 tw-text-lg"><FontAwesomeIcon icon={faUser} /></span></Link>
+                            <span className="tw-cursor-pointer tw-text-yellow-500 hover:tw-text-blue-900 tw-text-lg"><FontAwesomeIcon icon={faHeart} /></span>
+                            <Link to="/cart"><span className="tw-cursor-pointer tw-text-yellow-500 hover:tw-text-blue-900 tw-text-lg"><FontAwesomeIcon icon={faShoppingCart} /></span></Link>
+                            <span className="tw-cursor-pointer tw-text-yellow-500 hover:tw-text-blue-900 tw-text-lg"><FontAwesomeIcon icon={faSignal} /></span>
+                            <span className="tw-cursor-pointer tw-text-yellow-500 hover:tw-text-blue-900 tw-text-lg"><FontAwesomeIcon title="Logout" icon={faSignInAlt} /></span>
+                        </>
+                        :
+                        <>
+                            <Link to="/login"><span className="tw-cursor-pointer tw-text-yellow-500 hover:tw-text-blue-900 tw-text-lg"><FontAwesomeIcon title="Login" icon={faUser} /></span></Link>
+                        </>
+                }
             </div>
         </div>
     )
 }
+
+const mapStateToProps = (state) => {
+    return {
+        user: state.user
+    }
+}
+
+export default connect(mapStateToProps)(TopNav)
