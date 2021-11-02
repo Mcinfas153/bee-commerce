@@ -38,9 +38,7 @@ function App() {
                         <Route path="/register">
                             <Register />
                         </Route>
-                        <Route path="/cart">
-                            <ShoppingCart />
-                        </Route>
+                        <ProtectedRoute path="/cart" component={ShoppingCart} />
                         <ProtectedRoute path="/my-account" component={MyAccount} />
                         <Route path="/product/:id">
                             <ProductPage />
