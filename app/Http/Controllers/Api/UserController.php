@@ -43,17 +43,20 @@ class UserController extends Controller
 
             $status = true;
             $user = Auth::user();
+            $msg = 'User authenticated successfully';
 
         } else {
 
             $status = false;
             $user = [];
+            $msg = 'User authenticated failed';
 
         }
 
         return response()->json([
             'status' => $status,
-            'user' => $user
+            'user' => $user,
+            'msg' => $msg
         ], 200);
 
     }

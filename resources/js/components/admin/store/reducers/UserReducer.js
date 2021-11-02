@@ -1,7 +1,11 @@
-import { USER_LOGIN } from "../actionTypes/UserTypes"
+import { USER_LOGIN, USER_LOGIN_SUCCESS, USER_LOGIN_FAILURE } from "../actionTypes/UserTypes"
 
 const initialState = {
-    isAuthenticated: localStorage.getItem('isLogged')
+    user: [],
+    isAuthenticated: localStorage.getItem('user'),
+    errorMsg: '',
+    successMsg: '',
+    loadSpenner: false
 }
 
 const userReducer = (state = initialState, action) => {
@@ -9,11 +13,28 @@ const userReducer = (state = initialState, action) => {
         case USER_LOGIN:
             return {
                 ...state,
-                isAuthenticated: true
+                loadSpenner: true
+            }
+        case USER_LOGIN_SUCCESS:
+            localStorage.setItem('user', action.data.user.first_name)
+            return {
+                ...state,
+                user: action.data.user,
+                isAuthenticated: true,
+                successMsg: action.data.msg,
+                errorMsg: '',
+                loadSpenner: false
+            }
+        case USER_LOGIN_FAILURE:
+            return {
+                ...state,
+                errorMsg: action.data.msg,
+                successMsg: '',
+                isAuthenticated: false,
+                loadSpenner: false
             }
         default:
             return state
-
     }
 }
 
