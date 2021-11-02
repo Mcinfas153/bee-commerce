@@ -15,6 +15,7 @@ import { createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk'
 import rootReducer from './admin/store/reducers/RootReducer';
 import ProductPage from './product/ProductPage';
+import ProtectedRoute from './ProtectedRoute';
 
 
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
@@ -40,9 +41,7 @@ function App() {
                         <Route path="/cart">
                             <ShoppingCart />
                         </Route>
-                        <Route path="/my-account">
-                            <MyAccount />
-                        </Route>
+                        <ProtectedRoute path="/my-account" component={MyAccount} />
                         <Route path="/product/:id">
                             <ProductPage />
                         </Route>
