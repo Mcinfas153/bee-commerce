@@ -20,7 +20,7 @@ export function TopNav(props) {
                 <p className="tw-text-blue-900">Need help? <span className="tw-font-medium">0020 500</span></p>
                 <input type="text" className="tw-bg-gray-100 focus:tw-bg-white tw-rounded-full tw-py-2 tw-px-10 searchInput" placeholder="Search for products..." />
             </div>
-            <div className="tw-col-span-full md:tw-col-span-3 tw-hidden md:tw-flex tw-justify-center md:tw-justify-end tw-items-center tw-gap-5 tw-mt-5 md:tw-mt-0">
+            <div className="tw-col-span-full md:tw-col-span-3 tw-hidden md:tw-flex tw-justify-center md:tw-justify-end tw-items-center tw-gap-4 tw-mt-5 md:tw-mt-0">
                 {
                     user?.isAuthenticated ?
                         <>
@@ -32,7 +32,9 @@ export function TopNav(props) {
                         </>
                         :
                         <>
-                            <Link to="/login"><span className="tw-cursor-pointer tw-text-yellow-500 hover:tw-text-blue-900 tw-text-lg"><FontAwesomeIcon title="Login" icon={faUser} /></span></Link>
+                            <Link to="/login"><span className="tw-cursor-pointer tw-text-yellow-500 hover:tw-text-blue-900 tw-text-sm ">Sign In <FontAwesomeIcon title="Login" icon={faUser} className="tw-ml-2" /></span></Link>
+                            <div className="tw-border-r-2 tw-border-yellow-500 tw-h-5"></div>
+                            <Link to="/cart"><span className="tw-cursor-pointer tw-text-yellow-500 hover:tw-text-blue-900 tw-text-lg"><FontAwesomeIcon icon={faShoppingCart} /></span></Link>
                         </>
                 }
             </div>
