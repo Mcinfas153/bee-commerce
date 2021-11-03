@@ -5,6 +5,7 @@ import { userLogin } from './admin/store/actions/UserActions';
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
+import Alert from './Alert';
 
 const schema = yup.object({
     email: yup.string().required().email(),
@@ -27,7 +28,7 @@ export function Login(props) {
 
     useEffect(() => {
         user.isAuthenticated && history.push("/")
-    })
+    }, [user.isAuthenticated])
 
     return (
         <div className="login">
