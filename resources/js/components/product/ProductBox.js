@@ -6,7 +6,7 @@ export default function ProductBox(props) {
     const { id, name, image, price } = props
 
     return (
-        <div className="tw-transition tw-transform tw-duration-500 hover:tw-scale-105 tw-bg-white hover:tw-border-gray-200 tw-p-5 tw-transition tw-duration-200 tw-ease-in-out tw-shadow-sm">
+        <div className="tw-transition tw-transform tw-duration-500 tw-border-2 tw-rounded tw-border-yellow-500 hover:tw-scale-105 tw-bg-white hover:tw-border-gray-200 tw-p-5 tw-transition tw-duration-200 tw-ease-in-out tw-shadow-sm">
             <div className="tw-bg-yellow-500 tw-text-blue-900 tw-font-bold tw-text-xs tw-w-12 tw-uppercase tw-px-1 tw-py-1 tw-text-center tw-rounded-md tw-mb-2">new</div>
             <div className="tw-flex tw-justify-center">
                 <Link to={`/product/${id}`}>

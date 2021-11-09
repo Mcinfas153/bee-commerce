@@ -2,6 +2,7 @@ import { LIST_CATEGORIES, LIST_CATEGORIES_FAILURE, LIST_CATEGORIES_SUCCESS } fro
 
 const initialState = {
     categories: [],
+    products: [],
     list_spinner: false,
 };
 

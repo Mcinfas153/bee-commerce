@@ -17,6 +17,7 @@ import rootReducer from './admin/store/reducers/RootReducer';
 import ProductPage from './product/ProductPage';
 import ProtectedRoute from './ProtectedRoute';
 import Alert from './Alert';
+import ProductsPage from './product/ProductsPage';
 
 
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
@@ -45,6 +46,7 @@ function App() {
                         <Route path="/product/:id">
                             <ProductPage />
                         </Route>
+                        <Route path="/category/:id/products" component={ProductsPage} />
                     </Switch>
                     <Footer />
                 </div>

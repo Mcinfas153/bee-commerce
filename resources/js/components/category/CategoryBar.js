@@ -56,7 +56,7 @@ export function CategoryBar(props) {
             {
                 categories.map(category =>
                     <div key={category?.id}>
-                        <CategoryRound name={category?.name} image={category?.image_url} />
+                        <CategoryRound name={category?.name} image={category?.image_url} id={category?.id} />
                     </div>
                 )
             }
