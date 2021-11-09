@@ -55,22 +55,22 @@ export default function Footer() {
                     </div>
                     <div className="d-flex tw-items-center mx-auto">
                         <a href="#">
-                            <img src="../images/icons/visa.png" className="tw-mx-2" />
+                            <img src="/images/icons/visa.png" className="tw-mx-2" />
                         </a>
                         <a href="#">
-                            <img src="../images/icons/master-card.png" className="tw-mx-2" />
+                            <img src="/images/icons/master-card.png" className="tw-mx-2" />
                         </a>
                         <a href="#">
-                            <img src="../images/icons/paypal.png" className="tw-mx-2" />
+                            <img src="/images/icons/paypal.png" className="tw-mx-2" />
                         </a>
                         <a href="#">
-                            <img src="../images/icons/union-pay.png" className="tw-mx-2" />
+                            <img src="/images/icons/union-pay.png" className="tw-mx-2" />
                         </a>
                         <a href="#">
-                            <img src="../images/icons/g-pay.png" className="tw-mx-2" />
+                            <img src="/images/icons/g-pay.png" className="tw-mx-2" />
                         </a>
                         <a href="#">
-                            <img src="../images/icons/apple-pay.png" className="tw-mx-2" />
+                            <img src="/images/icons/apple-pay.png" className="tw-mx-2" />
                         </a>
                     </div>
                 </div>
