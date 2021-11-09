@@ -5,6 +5,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export default function Alert(props) {
     return (
-        <ToastContainer position="top-right" />
+        <ToastContainer position="top-right" theme="colored" />
     )
 }
