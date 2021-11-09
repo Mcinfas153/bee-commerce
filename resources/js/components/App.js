@@ -16,6 +16,7 @@ import thunkMiddleware from 'redux-thunk'
 import rootReducer from './admin/store/reducers/RootReducer';
 import ProductPage from './product/ProductPage';
 import ProtectedRoute from './ProtectedRoute';
+import Alert from './Alert';
 
 
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
@@ -28,6 +29,7 @@ function App() {
                     <TopBar />
                     <TopNav />
                     <Navbar />
+                    <Alert />
                     <Switch>
                         <Route exact path="/">
                             <Home />
