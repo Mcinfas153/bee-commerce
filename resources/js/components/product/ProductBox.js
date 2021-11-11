@@ -10,7 +10,7 @@ export default function ProductBox(props) {
             <div className="tw-bg-yellow-500 tw-text-blue-900 tw-font-bold tw-text-xs tw-w-12 tw-uppercase tw-px-1 tw-py-1 tw-text-center tw-rounded-md tw-mb-2">new</div>
             <div className="tw-flex tw-justify-center">
                 <Link to={`/product/${id}`}>
-                    <img className="tw-transform tw-transition tw-duration-1000 tw-w-24 hover:tw-scale-75" src={image} />
+                    <img loading="lazy" className="tw-transform tw-transition tw-duration-1000 tw-w-24 hover:tw-scale-75" src={image} />
                 </Link>
             </div>
             <Link to={`/product/${id}`}>

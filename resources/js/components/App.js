@@ -46,7 +46,7 @@ function App() {
                         <Route path="/product/:id">
                             <ProductPage />
                         </Route>
-                        <Route path="/category/:id/products" component={ProductsPage} />
+                        <Route path="/category/:catid/products" component={ProductsPage} />
                     </Switch>
                     <Footer />
                 </div>
