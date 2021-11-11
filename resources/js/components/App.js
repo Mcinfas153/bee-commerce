@@ -18,7 +18,7 @@ import ProductPage from './product/ProductPage';
 import ProtectedRoute from './ProtectedRoute';
 import Alert from './Alert';
 import ProductsPage from './product/ProductsPage';
-
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
 

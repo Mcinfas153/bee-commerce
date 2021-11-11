@@ -10,7 +10,7 @@ import {
 const initialState = {
     categories: [1, 2],
     products: [],
-    list_spinner: false,
+    listSpinner: false,
 };
 
 const categoryReducer = function (state = initialState, action) {
