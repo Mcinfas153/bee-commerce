@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
+use Illuminate\Support\Str;
 
 class ProductTest extends TestCase
 {
@@ -32,6 +33,18 @@ class ProductTest extends TestCase
         return $response->assertStatus(200)
         ->assertJsonStructure([
             'product'
+        ]);
+    }
+
+    public function test_product_search()
+    {
+        $key = Str::random();
+
+        $response = $this->json('GET', 'api/products/search/'. $key);
+
+        $response->assertStatus(200)
+        ->assertJsonStructure([
+            'products'
         ]);
     }
 }

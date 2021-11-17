@@ -26,4 +26,16 @@ class ProductController extends Controller
             'product' => $product,
         ], 200);
     }
+
+    public function search($title)
+    {
+        $key = $title;
+        $products = DB::table('products')
+                    ->where('title', 'like', '%'.$key.'%')
+                    ->get();
+
+        return response()->json([
+            'products' => $products
+        ], 200);
+    }
 }

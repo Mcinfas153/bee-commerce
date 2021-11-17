@@ -22,3 +22,4 @@ Route::get('/categories', [CategoryController::class, 'index'])->name('category.
 Route::get('/products', [ProductController::class, 'index'])->name('products.list');
 Route::get('/category/{id}/products', [CategoryController::class, 'products'])->name('category.products');
 Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show');
+Route::get('/products/search/{title}', [ProductController::class, 'search'])->name('products.search');
