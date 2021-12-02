@@ -12,18 +12,18 @@ export function ProductRow(props) {
     const { products } = props.products
 
     let settings = {
-        dots: false,
+        dots: true,
         className: "center",
         speed: 500,
-        slidesToShow: 5,
+        slidesToShow: 4,
         slidesToScroll: 3,
-        arrows: false,
+        arrows: true,
         responsive: [
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 5,
-                    slidesToScroll: 3,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
                     infinite: true,
                 }
             },

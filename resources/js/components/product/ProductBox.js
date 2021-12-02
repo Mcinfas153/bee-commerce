@@ -6,20 +6,32 @@ export default function ProductBox(props) {
     const { id, name, image, price } = props
 
     return (
-        <div className="tw-transition tw-transform tw-duration-500 tw-border tw-rounded tw-border-yellow-500 hover:tw-scale-105 tw-bg-white hover:tw-border-gray-200 tw-transition tw-duration-200 tw-ease-in-out tw-shadow-sm">
-            <div className="tw-bg-yellow-500 tw-text-blue-900 tw-font-bold tw-text-xs tw-w-full tw-uppercase tw-px-1 tw-py-1 tw-text-center tw-mb-2">14% Discount</div>
-            <div className="tw-px-2 tw-py-5">
+        <div className="tw-transition tw-duration-500 tw-rounded-md tw-mr-2 tw-border tw-border-gray-200 tw-bg-white tw-transition tw-duration-200 tw-ease-in-out tw-shadow-sm">
+            <div className="tw-bg-yellow-500 tw-text-blue-900 tw-rounded-t-md tw-font-bold tw-text-xs tw-w-full tw-uppercase tw-px-1 tw-py-1 tw-text-center tw-mb-2">14% Discount</div>
+            <div className="tw-pt-5">
                 <div className="tw-flex tw-justify-center">
                     <Link to={`/product/${id}`}>
                         <img loading="lazy" className="tw-transform tw-transition tw-duration-1000 tw-w-40 hover:tw-scale-95" src={image} />
                     </Link>
                 </div>
                 <Link to={`/product/${id}`}>
-                    <p className="tw-text-center tw-text-yellow-500 hover:tw-text-blue-900 tw-transition tw-duration-500 tw-font-medium tw-mt-3 tw-text-sm">{name}</p>
+                    <p className="tw-text-center tw-text-yellow-500 hover:tw-text-blue-900 tw-transition tw-duration-500 tw-font-medium tw-mt-3 tw-text-lg">{name}</p>
                 </Link>
                 <p className="tw-text-center tw-text-blue-900 hover:tw-text-yellow-500 tw-transition tw-duration-500 tw-font-bold tw-text-sm tw-my-2">${price} <span className="tw-text-red-500 tw-font-medium tw-ml-1 tw-line-through tw-text-sm">${price}</span></p>
-                <div className="tw-flex tw-justify-center">
-                    <button className="tw-transition tw-duration-500 tw-bg-blue-900 hover:tw-bg-yellow-500 tw-text-yellow-500 hover:tw-text-blue-900 tw-transform hover:tw-scale-110 tw-font-bold tw-px-5 tw-py-1">Add to Cart</button>
+                <div className="tw-flex tw-justify-center tw-items-center tw-px-2">
+                    <img src="https://img.icons8.com/fluency/20/000000/star.png"/>
+                    <img src="https://img.icons8.com/fluency/20/000000/star.png"/>
+                    <img src="https://img.icons8.com/fluency/20/000000/star.png"/>
+                    <img src="https://img.icons8.com/fluency/20/000000/star.png"/>
+                    <img src="https://img.icons8.com/fluency/20/000000/star.png"/>
+                </div>
+                <div className="tw-flex tw-justify-center tw-items-center tw-pt-5 tw-px-5">
+                    <button className="tw-bg-blue-900 hover:tw-bg-yellow-500 tw-p-2 tw-rounded-full tw-mr-3"><img src="https://img.icons8.com/material-outlined/20/ffffff/like--v2.png"/></button>
+                    <button className="tw-bg-blue-900 hover:tw-bg-yellow-500 tw-px-2 tw-py-2 tw-rounded-full tw-mr-3"><img src="https://img.icons8.com/material-outlined/20/ffffff/favorite-cart.png"/></button>
+                    <button className="tw-bg-blue-900 hover:tw-bg-yellow-500 tw-px-2 tw-py-2 tw-rounded-full tw-mr-3"><img src="https://img.icons8.com/material-outlined/20/ffffff/shopping-cart--v1.png"/></button>
+                </div>
+                <div className="tw-pt-3">
+                    <button className="tw-bg-blue-900 hover:tw-bg-yellow-500 tw-w-full tw-text-white tw-py-2 tw-rounded-b-md">Buy Now</button>
                 </div>
             </div>
         </div>
