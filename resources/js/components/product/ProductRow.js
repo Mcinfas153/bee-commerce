@@ -12,12 +12,12 @@ export function ProductRow(props) {
     const { products } = props.products
 
     let settings = {
-        dots: true,
+        dots: false,
         className: "center",
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 3,
-        arrows: true,
+        arrows: false,
         responsive: [
             {
                 breakpoint: 1024,
@@ -51,13 +51,17 @@ export function ProductRow(props) {
     }, [])
 
     return (
-        <div className="">
-            <p className="tw-text-xl tw-font-bold tw-uppercase tw-tracking-wide tw-mb-3">{name}</p>
+        <div className="tw-my-10">
+            <div className="tw-flex tw-justify-between tw-items-center tw-mb-4">
+                <p className="tw-text-xl tw-font-bold tw-uppercase tw-tracking-wide">{name}</p>
+                <button className="tw-bg-yellow-500 hover:tw-bg-blue-900 tw-text-white tw-font-bold tw-py-2 tw-px-8 tw-hidden sm:tw-block">Show All 🠒</button>
+            </div>
             <Slider {...settings}>
                 {
                     products.map(product => <ProductBox key={product?.id} id={product?.id} name={product?.title} price={product?.price} image={product?.picture_url} />)
                 }
             </Slider>
+            <button className="tw-bg-yellow-500 hover:tw-bg-blue-900 tw-text-white tw-font-bold tw-my-3 tw-py-2 sm:tw-hidden tw-rounded tw-w-full">Show All 🠒</button>
         </div>
     )
 }
