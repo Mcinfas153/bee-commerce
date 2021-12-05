@@ -14,7 +14,7 @@ export default function MyAccount() {
                 <LeftBar className="tw-fixed tw-top-0" />
             </div>
             <div className="md:tw-col-span-7 lg:tw-col-span-8 tw-hidden md:tw-block">
-                <p className="tw-my-10 tw-mx-5">
+                <p className="tw-my-10 tw-mx-5 tw-border tw-rounded-lg">
                     <Switch>
                         <Route exact path={path}>
                             <Dashboard />
