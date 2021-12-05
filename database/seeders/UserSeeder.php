@@ -19,11 +19,13 @@ class UserSeeder extends Seeder
 
         User::truncate();
 
-        DB::table('users')->insert([
-            'first_name' => 'Infas',
-            'last_name' => 'Mohammed',
-            'email' => 'mcinfas@gmail.com',
-            'password' => Hash::make('12345678')
-        ]);
+        // DB::table('users')->insert([
+        //     'first_name' => 'Infas',
+        //     'last_name' => 'Mohammed',
+        //     'email' => 'mcinfas@gmail.com',
+        //     'password' => Hash::make('12345678')
+        // ]);
+
+        User::factory(10)->create();
     }
 }

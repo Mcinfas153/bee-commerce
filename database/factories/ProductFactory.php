@@ -24,7 +24,7 @@ class ProductFactory extends Factory
         Product::truncate();
 
         return [
-            'title' => $this->faker->word(),
+            'title' => $this->faker->sentence(3),
             'description' => $this->faker->paragraph(),
             'qty' => $this->faker->randomDigit(),
             'price' => $this->faker->randomFloat($nbMaxDecimals = 2, 10, 10000),
