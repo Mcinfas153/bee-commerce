@@ -21,6 +21,8 @@ class ProductFactory extends Factory
      */
     public function definition()
     {
+        Product::truncate();
+
         return [
             'title' => $this->faker->word(),
             'description' => $this->faker->paragraph(),
