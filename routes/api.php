@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\CategoryController;
+use App\Http\Controllers\Api\OrderController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\ProductController;
@@ -23,3 +24,4 @@ Route::get('/products', [ProductController::class, 'index'])->name('products.lis
 Route::get('/category/{id}/products', [CategoryController::class, 'products'])->name('category.products');
 Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show');
 Route::get('/products/search/{title}', [ProductController::class, 'search'])->name('products.search');
+Route::get('/orders', [OrderController::class, 'orders'])->name('user.orders');
