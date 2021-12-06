@@ -44,19 +44,22 @@ class UserController extends Controller
             $status = true;
             $user = Auth::user();
             $msg = 'User authenticated successfully';
+            $token = Auth::user()->createToken($user->last_name)->plainTextToken;
 
         } else {
 
             $status = false;
             $user = [];
             $msg = 'User authenticated failed';
+            $token = '';
 
         }
 
         return response()->json([
             'status' => $status,
             'user' => $user,
-            'msg' => $msg
+            'msg' => $msg,
+            'token' => $token
         ], 200);
 
     }
