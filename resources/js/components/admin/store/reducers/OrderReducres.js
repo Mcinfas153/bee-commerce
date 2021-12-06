@@ -3,6 +3,7 @@ import { LIST_ORDERS, LIST_ORDERS_SUCCESS, LIST_ORDERS_FAILURE } from "../action
 const initialState = {
     orders: [],
     orderCount: 0,
+    todayOrders: 0,
     listSpinner: false
 }
 
@@ -18,6 +19,7 @@ const orderReducer = function (state = initialState, action) {
                 ...state,
                 orders: action.data.orders,
                 orderCount: action.data.orderCount,
+                todayOrders: action.data.todayOrders,
                 listSpinner: false
             };
         case LIST_ORDERS_FAILURE:
