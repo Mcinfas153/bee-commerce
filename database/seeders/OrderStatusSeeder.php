@@ -22,7 +22,8 @@ class OrderStatusSeeder extends Seeder
             ['name' => 'CONFIRMED'],
             ['name' => 'OUT_FOR_DELIVERY'],
             ['name' => 'SHIPPED'],
-            ['name' => 'DELIVERD']
+            ['name' => 'DELIVERD'],
+            ['name' => 'RETURNED']
         ]);
     }
 }

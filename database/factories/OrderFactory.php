@@ -25,7 +25,7 @@ class OrderFactory extends Factory
         return [
             'user_id' => $this->faker->numberBetween(1,10),
             'amount' => $this->faker->randomFloat(2, 15, 10000),
-            'order_status_id' => $this->faker->numberBetween(1, 3),
+            'order_status_id' => $this->faker->numberBetween(1, 6),
             'created_at' => $this->faker->dateTimeThisMonth(),
             'updated_at' => $this->faker->dateTimeThisMonth()
         ];
