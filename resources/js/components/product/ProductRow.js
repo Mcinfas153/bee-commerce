@@ -53,7 +53,7 @@ export function ProductRow(props) {
     return (
         <div className="tw-my-10">
             <div className="tw-flex tw-justify-between tw-items-center tw-mb-4">
-                <p className="tw-text-xl tw-font-bold tw-uppercase tw-tracking-wide">{name}</p>
+                <p className="tw-text-xl tw-text-blue-900 tw-font-bold tw-uppercase tw-tracking-wide">{name}</p>
                 <button className="tw-bg-yellow-500 hover:tw-bg-blue-900 tw-text-white tw-font-bold tw-py-2 tw-px-8 tw-hidden sm:tw-block">Show All 🠒</button>
             </div>
             <Slider {...settings}>

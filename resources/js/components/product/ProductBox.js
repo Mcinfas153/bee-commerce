@@ -31,7 +31,7 @@ export default function ProductBox(props) {
                     <button className="tw-bg-blue-900 hover:tw-bg-yellow-500 tw-px-2 tw-py-2 tw-rounded-full tw-mr-3 tw-transition tw-duration-500 tw-ease-in-out tw-transform hover:tw-scale-110"><img src="https://img.icons8.com/material-outlined/20/ffffff/shopping-cart--v1.png"/></button>
                 </div>
                 <div className="tw-pt-3">
-                    <button className="tw-bg-blue-900 hover:tw-bg-yellow-500 tw-w-full tw-text-white tw-py-2 tw-rounded-b-md tw-flex tw-justify-center tw-items-center"><img src="https://img.icons8.com/material-outlined/18/ffffff/buy.png" className="tw-mr-1"/> Buy Now</button>
+                    <button className="hover:tw-bg-blue-900 tw-bg-yellow-500 tw-w-full tw-text-white tw-py-2 tw-rounded-b-md tw-flex tw-justify-center tw-items-center"><img src="https://img.icons8.com/material-outlined/18/ffffff/buy.png" className="tw-mr-1"/> Buy Now</button>
                 </div>
             </div>
         </div>

@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import CategoryBar from './category/CategoryBar'
 import CategoryBox from './category/CategoryBox'
+import CategoryIcon from './category/CategoryIcon'
+import OfferProduct from './product/OfferProduct';
 import { listCategories } from './admin/store/actions/CategoryActions';
 import { connect } from 'react-redux';
 import ProductRow from './product/ProductRow';
@@ -32,6 +34,32 @@ export function Home(props) {
             </div>
             <div className="tw-my-5 md:tw-my-10 tw-mx-5 lg:tw-mx-10">
                 <ProductRow name="Electronics" category_id={7} />
+            </div>
+            <div className="tw-my-8 md:tw-my-10 tw-mx-5 lg:tw-mx-10">
+                <div className='tw-grid md:tw-py-5 tw-grid-cols-2 sm:tw-grid-cols-4 md:tw-grid-cols-5 lg:tw-grid-cols-7 tw-gap-5 tw-items-center'>
+                    <CategoryIcon Name="Best Deals" Image="https://img.icons8.com/fluency-systems-regular/40/1E3A8A/best-sales.png"/>
+                    <CategoryIcon Name="Medicines" Image="https://img.icons8.com/ios/40/1E3A8A/aed.png"/>
+                    <CategoryIcon Name="Health & Beauty" Image="https://img.icons8.com/material-outlined/40/1E3A8A/lipstick.png"/>
+                    <CategoryIcon Name="Home Appliances" Image="https://img.icons8.com/material-outlined/40/1E3A8A/insurance-furniture.png"/>
+                    <CategoryIcon Name="Accessories" Image="https://img.icons8.com/material-outlined/40/1E3A8A/accessibility2.png"/>
+                    <CategoryIcon Name="Office Suppliances" Image="https://img.icons8.com/material-outlined/40/1E3A8A/home-office.png"/>
+                    <CategoryIcon Name="Best Offers" Image="https://img.icons8.com/material-outlined/40/1E3A8A/price-tag.png"/>
+                </div>
+            </div>
+            <div className="tw-my-5 md:tw-my-10 tw-mx-5 lg:tw-mx-10">
+                <ProductRow name="Health & Beauty" category_id={8} />
+            </div>
+            <div className="tw-my-5 md:tw-my-10 tw-mx-5 lg:tw-mx-10">
+                <ProductRow name="Business & Industrial" category_id={9} />
+            </div>
+            <div className="tw-my-5 md:tw-my-10 tw-mx-5 lg:tw-mx-10">
+                <p className='tw-text-center tw-text-blue-900 tw-text-3xl tw-font-semibold tw-mb-5'>Offer Products</p>
+                <div className='tw-grid tw-grid-cols-1 sm:tw-grid-cols-2 md:tw-grid-cols-3 lg:tw-grid-cols-4 tw-gap-10'>
+                    <OfferProduct name="Candid Whitening Kit" Price="$129.00" OriginalPrice="$150.00"/>
+                    <OfferProduct name="Honest Multi-surface Pro" Price="$49.00" OriginalPrice="$55.00"/>
+                    <OfferProduct name="SuperBrush X200 Higenic" Price="$97.00" OriginalPrice="$105.00"/>
+                    <OfferProduct name="Somersung Sonic X2000" Price="$39.00" OriginalPrice="$46.00"/>
+                </div>
             </div>
             <div>
                 <div className="tw-my-20 tw-mx-10 tw-text-center">

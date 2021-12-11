@@ -20,35 +20,57 @@ export default function Navbar() {
                 </div>
                 <div className="tw-col-span-full md:tw-col-span-4 tw-hidden md:tw-block">
                     <ul className="tw-flex tw-flex-row tw-gap-10 ">
-                        <li className="tw-uppercase tw-text-gray-50 tw-text-sm tw-font-bold hover:tw-text-white tw-cursor-pointer">
+                        <li className="tw-uppercase tw-text-white tw-text-sm tw-font-bold hover:tw-text-yellow-500">
                             <Link to="/">Electronics</Link>
                         </li>
-                        <li className="tw-uppercase tw-text-gray-50 tw-text-sm tw-font-bold hover:tw-text-white tw-cursor-pointer">
+                        <li className="tw-uppercase tw-text-white tw-text-sm tw-font-bold hover:tw-text-yellow-500">
                             <Link to="/">Men</Link>
                         </li>
-                        <li className="tw-uppercase tw-text-gray-50 tw-text-sm tw-font-bold hover:tw-text-white tw-cursor-pointer">
+                        <li className="tw-uppercase tw-text-white tw-text-sm tw-font-bold hover:tw-text-yellow-500">
                             <Link to="/">Women</Link>
                         </li>
-                        <li className="tw-uppercase tw-text-gray-50 tw-text-sm tw-font-bold hover:tw-text-white tw-cursor-pointer">
+                        <li className="tw-uppercase tw-text-white tw-text-sm tw-font-bold hover:tw-text-yellow-500">
                             <Link to="/">Home</Link>
                         </li>
-                        <li className="tw-uppercase tw-text-gray-50 tw-text-sm tw-font-bold hover:tw-text-white tw-cursor-pointer">
+                        <li className="tw-uppercase tw-text-white tw-text-sm tw-font-bold hover:tw-text-yellow-500">
                             <Link to="/">Grocery</Link>
                         </li>
-                        <li className="tw-uppercase tw-text-gray-50 tw-text-sm tw-font-bold hover:tw-text-white tw-cursor-pointer">
+                        <li className="tw-uppercase tw-text-white tw-text-sm tw-font-bold hover:tw-text-yellow-500">
                             <Link to="/">Sports</Link>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <Offcanvas show={show} onHide={handleClose}>
+            <Offcanvas className="tw-w-80" show={show} onHide={handleClose}>
                 <Offcanvas.Header closeButton>
-                    <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+                    <Offcanvas.Title className='tw-font-bold tw-text-blue-900'>All Categories</Offcanvas.Title>
                 </Offcanvas.Header>
-                <Offcanvas.Body>
-                    Some text as placeholder. In real life you can have the elements you
-                    have chosen. Like, text, images, lists, etc.
+                <Offcanvas.Body className='tw-px-0 tw-py-0'>
+                    <p className='tw-text-lg tw-font-bold'></p>
+                    <ul className="">
+                        <li className="tw-py-3 tw-px-5 tw-text-white tw-bg-yellow-500 tw-border tw-rounded tw-text-sm tw-font-bold hover:tw-text-blue-900">
+                            <Link to="/">Baby & Toddler</Link>
+                        </li>
+                        <li className="tw-py-3 tw-px-5 tw-text-white tw-bg-yellow-500 tw-border tw-rounded tw-text-sm tw-font-bold hover:tw-text-blue-900">
+                            <Link to="/">Office Supplies</Link>
+                        </li>
+                        <li className="tw-py-3 tw-px-5 tw-text-white tw-bg-yellow-500 tw-border tw-rounded tw-text-sm tw-font-bold hover:tw-text-blue-900">
+                            <Link to="/">Health & Beauty</Link>
+                        </li>
+                        <li className="tw-py-3 tw-px-5 tw-text-white tw-bg-yellow-500 tw-border tw-rounded tw-text-sm tw-font-bold hover:tw-text-blue-900">
+                            <Link to="/">Toys & Games</Link>
+                        </li>
+                        <li className="tw-py-3 tw-px-5 tw-text-white tw-bg-yellow-500 tw-border tw-rounded tw-text-sm tw-font-bold hover:tw-text-blue-900">
+                            <Link to="/">Furnitures</Link>
+                        </li>
+                        <li className="tw-py-3 tw-px-5 tw-text-white tw-bg-yellow-500 tw-border tw-rounded tw-text-sm tw-font-bold hover:tw-text-blue-900">
+                            <Link to="/">Home Appliances</Link>
+                        </li>
+                        <li className="tw-py-3 tw-px-5 tw-text-white tw-bg-yellow-500 tw-border tw-rounded tw-text-sm tw-font-bold hover:tw-text-blue-900">
+                            <Link className='tw-flex tw-justify-between tw-items-center' to="/">Clothes <img src="https://img.icons8.com/fluency-systems-filled/15/ffffff/chevron-down--v2.png"/></Link>
+                        </li>
+                    </ul>
                 </Offcanvas.Body>
             </Offcanvas>
         </>
