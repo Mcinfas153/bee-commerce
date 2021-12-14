@@ -15,14 +15,22 @@ export function ProductRow(props) {
         dots: false,
         className: "center",
         speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 3,
+        slidesToShow: 5,
+        slidesToScroll: 4,
         arrows: false,
         responsive: [
             {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 3,
+                    infinite: true,
+                }
+            },
+            {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 3,
                     slidesToScroll: 2,
                     infinite: true,
                 }
@@ -30,7 +38,7 @@ export function ProductRow(props) {
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                     initialSlide: 1
                 }
