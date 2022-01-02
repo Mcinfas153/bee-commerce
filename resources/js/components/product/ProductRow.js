@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react'
-import ProductBox from './ProductBox'
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import ProductBox from './ProductBox';
 import Slider from "react-slick";
 import { connect } from 'react-redux';
 import { listProducts } from '../admin/store/actions/ProductAction';
@@ -8,7 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 export function ProductRow(props) {
 
-    const { name, category_id } = props
+    const { name, category_id, id } = props
     const { products } = props.products
 
     let settings = {
@@ -60,16 +61,20 @@ export function ProductRow(props) {
 
     return (
         <div className="tw-my-10">
-            <div className="tw-flex tw-justify-between tw-items-center tw-mb-4">
-                <p className="tw-text-xl tw-text-blue-900 tw-font-bold tw-uppercase tw-tracking-wide">{name}</p>
-                <button className="tw-bg-yellow-500 hover:tw-bg-blue-900 tw-text-white tw-font-bold tw-py-2 tw-px-8 tw-hidden sm:tw-block">Show All 🠒</button>
-            </div>
+            <Link to={`/category/${id}/products`}>
+                <div className="tw-flex tw-justify-between tw-items-center tw-mb-4">
+                    <p className="tw-text-xl tw-text-blue-900 tw-font-bold tw-uppercase tw-tracking-wide">{name}</p>
+                    <button className="tw-bg-yellow-500 hover:tw-bg-blue-900 tw-text-white tw-font-bold tw-py-2 tw-px-8 tw-hidden sm:tw-block tw-transition tw-duration-1200 tw-ease-in-out tw-transform hover:tw-scale-90">Show All 🠒</button>
+                </div>
+            </Link>
             <Slider {...settings}>
                 {
-                    products.map(product => <ProductBox key={product?.id} id={product?.id} name={product?.title} price={product?.price} image={product?.picture_url} />)
+                    products.map(product => <ProductBox key={product?.id} id={product?.id} name={product?.title} price={product?.price} image={product?.picture_url} discount={product?.id} />)
                 }
             </Slider>
-            <button className="tw-bg-yellow-500 hover:tw-bg-blue-900 tw-text-white tw-font-bold tw-my-3 tw-py-2 sm:tw-hidden tw-rounded tw-w-full">Show All 🠒</button>
+            <Link to={`/category/${id}/products`}>
+                <button className="tw-bg-yellow-500 hover:tw-bg-blue-900 tw-text-white tw-font-bold tw-my-3 tw-py-2 sm:tw-hidden tw-rounded tw-w-full">Show All 🠒</button>
+            </Link>
         </div>
     )
 }

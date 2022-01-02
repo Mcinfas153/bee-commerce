@@ -30,27 +30,27 @@ export function Home(props) {
                 }
             </div>
             <div className="tw-my-5 md:tw-my-10 tw-mx-5 lg:tw-mx-10">
-                <ProductRow name="Clothing & Accessories" category_id={6} />
+                <ProductRow id="3" name="Clothing & Accessories" category_id={6} />
             </div>
             <div className="tw-my-5 md:tw-my-10 tw-mx-5 lg:tw-mx-10">
-                <ProductRow name="Electronics" category_id={7} />
+                <ProductRow id="4" name="Electronics" category_id={12} />
             </div>
             <div className="tw-my-8 md:tw-my-10 tw-mx-5 lg:tw-mx-10">
                 <div className='tw-grid md:tw-py-5 tw-grid-cols-2 sm:tw-grid-cols-4 md:tw-grid-cols-5 lg:tw-grid-cols-7 tw-gap-5 tw-items-center'>
-                    <CategoryIcon Name="Best Deals" Image="https://img.icons8.com/fluency-systems-regular/40/1E3A8A/best-sales.png"/>
-                    <CategoryIcon Name="Medicines" Image="https://img.icons8.com/ios/40/1E3A8A/aed.png"/>
-                    <CategoryIcon Name="Health & Beauty" Image="https://img.icons8.com/material-outlined/40/1E3A8A/lipstick.png"/>
-                    <CategoryIcon Name="Home Appliances" Image="https://img.icons8.com/material-outlined/40/1E3A8A/insurance-furniture.png"/>
-                    <CategoryIcon Name="Accessories" Image="https://img.icons8.com/material-outlined/40/1E3A8A/accessibility2.png"/>
-                    <CategoryIcon Name="Office Suppliances" Image="https://img.icons8.com/material-outlined/40/1E3A8A/home-office.png"/>
-                    <CategoryIcon Name="Best Offers" Image="https://img.icons8.com/material-outlined/40/1E3A8A/price-tag.png"/>
+                    <CategoryIcon id="1" Name="Best Deals" Image="https://img.icons8.com/fluency-systems-regular/40/1E3A8A/best-sales.png"/>
+                    <CategoryIcon id="2" Name="Medicines" Image="https://img.icons8.com/ios/40/1E3A8A/aed.png"/>
+                    <CategoryIcon id="3" Name="Health & Beauty" Image="https://img.icons8.com/material-outlined/40/1E3A8A/lipstick.png"/>
+                    <CategoryIcon id="4" Name="Home Appliances" Image="https://img.icons8.com/material-outlined/40/1E3A8A/insurance-furniture.png"/>
+                    <CategoryIcon id="5" Name="Accessories" Image="https://img.icons8.com/material-outlined/40/1E3A8A/accessibility2.png"/>
+                    <CategoryIcon id="6" Name="Office Suppliances" Image="https://img.icons8.com/material-outlined/40/1E3A8A/home-office.png"/>
+                    <CategoryIcon id="7" Name="Best Offers" Image="https://img.icons8.com/material-outlined/40/1E3A8A/price-tag.png"/>
                 </div>
             </div>
             <div className="tw-my-5 md:tw-my-10 tw-mx-5 lg:tw-mx-10">
-                <ProductRow name="Health & Beauty" category_id={8} />
+                <ProductRow id="1" name="Health & Beauty" category_id={8} />
             </div>
             <div className="tw-my-5 md:tw-my-10 tw-mx-5 lg:tw-mx-10">
-                <ProductRow name="Business & Industrial" category_id={9} />
+                <ProductRow id="2" name="Business & Industrial" category_id={9} />
             </div>
             <div className="tw-my-5 md:tw-my-10 tw-mx-5 lg:tw-mx-10">
                 <p className='tw-text-center tw-text-blue-900 tw-text-3xl tw-font-semibold tw-mb-5'>Offer Products</p>
