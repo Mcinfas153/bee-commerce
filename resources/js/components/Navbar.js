@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
-import { Offcanvas } from 'react-bootstrap';
+import { Offcanvas,Dropdown } from 'react-bootstrap';
 
 export default function Navbar() {
 
@@ -67,6 +67,17 @@ export default function Navbar() {
                         <li className="tw-py-3 tw-px-5 tw-text-white tw-bg-yellow-500 tw-border tw-rounded tw-text-sm tw-font-bold hover:tw-text-blue-900">
                             <Link to={`/category/6/products`}>Home Appliances</Link>
                         </li>
+                        <Dropdown className='tw-bg-yellow-500'>
+                            <Dropdown.Toggle className="tw-w-full text-start tw-py-3 tw-px-5 tw-text-white tw-border tw-rounded tw-text-sm tw-font-bold tw-bg-yellow-500 hover:tw-text-blue-900 tw-border-none" id="dropdown-item-button">
+                                Clothes
+                            </Dropdown.Toggle>
+
+                            <Dropdown.Menu>
+                                <Dropdown.Item href="#/action-1">Shirts</Dropdown.Item>
+                                <Dropdown.Item href="#/action-2">Jeans</Dropdown.Item>
+                                <Dropdown.Item href="#/action-3">Skirts</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
                         <li className="tw-py-3 tw-px-5 tw-text-white tw-bg-yellow-500 tw-border tw-rounded tw-text-sm tw-font-bold hover:tw-text-blue-900">
                             <Link className='tw-flex tw-justify-between tw-items-center' to={`/category/7/products`}>Clothes <img src="https://img.icons8.com/fluency-systems-filled/15/ffffff/chevron-down--v2.png"/></Link>
                         </li>
