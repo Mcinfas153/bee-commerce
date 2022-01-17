@@ -24,7 +24,7 @@ export function ProductsPage(props) {
             </>
             :
             <>
-                <div className="tw-grid tw-grid-cols-1 sm:tw-grid-cols-2 md:tw-grid-cols-2 lg:tw-grid-cols-3 xl:tw-grid-cols-4 gap-3 tw-my-5 md:tw-my-10 tw-mx-5 lg:tw-mx-10">
+                <div className="tw-grid tw-grid-cols-1 sm:tw-grid-cols-2 md:tw-grid-cols-3 lg:tw-grid-cols-4 xl:tw-grid-cols-4 gap-3 tw-my-5 md:tw-my-10 tw-mx-5 lg:tw-mx-10">
                     {
                         products.map(product =>
                             <div>

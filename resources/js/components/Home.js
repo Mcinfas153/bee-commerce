@@ -24,7 +24,7 @@ export function Home(props) {
                 {
                     categories.slice(0, 4).map(category => (
                         <div key={category?.id}>
-                            <CategoryBox name={category?.name} image={category?.image_url} />
+                            <CategoryBox name={category?.name} image={category?.image_url} id={category?.id} />
                         </div>
                     ))
                 }
@@ -55,10 +55,10 @@ export function Home(props) {
             <div className="tw-my-5 md:tw-my-10 tw-mx-5 lg:tw-mx-10">
                 <p className='tw-text-center tw-text-blue-900 tw-text-3xl tw-font-semibold tw-mb-5'>Offer Products</p>
                 <div className='tw-grid tw-grid-cols-1 sm:tw-grid-cols-2 md:tw-grid-cols-3 lg:tw-grid-cols-4 tw-gap-10'>
-                    <OfferProduct name="Candid Whitening Kit" Price="$129.00" OriginalPrice="$150.00"/>
-                    <OfferProduct name="Honest Multi-surface Pro" Price="$49.00" OriginalPrice="$55.00"/>
-                    <OfferProduct name="SuperBrush X200 Higenic" Price="$97.00" OriginalPrice="$105.00"/>
-                    <OfferProduct name="Somersung Sonic X2000" Price="$39.00" OriginalPrice="$46.00"/>
+                    <OfferProduct name="Candid Whitening Kit" Price="$129.00" OriginalPrice="$150.00" id="1"/>
+                    <OfferProduct name="Honest Multi-surface Pro" Price="$49.00" OriginalPrice="$55.00" id="2"/>
+                    <OfferProduct name="SuperBrush X200 Higenic" Price="$97.00" OriginalPrice="$105.00" id="3"/>
+                    <OfferProduct name="Somersung Sonic X2000" Price="$39.00" OriginalPrice="$46.00" id="4"/>
                 </div>
             </div>
             <div>
