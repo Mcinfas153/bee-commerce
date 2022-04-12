@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import truncate from 'truncate'
 
 export default function ProductBox(props) {
 
@@ -15,7 +16,7 @@ export default function ProductBox(props) {
                     </Link>
                 </div>
                 <Link to={`/product/${id}`}>
-                    <p className="tw-text-center tw-text-yellow-500 hover:tw-text-blue-900 tw-transition tw-duration-500 tw-font-medium tw-mt-3 tw-text-lg tw-px-2">{name}</p>
+                    <p className="tw-text-center tw-text-yellow-500 hover:tw-text-blue-900 tw-transition tw-duration-500 tw-font-medium tw-mt-3 tw-text-lg tw-px-2">{truncate(name, 20)}</p>
                 </Link>
                 <p className="tw-text-center tw-text-blue-900 hover:tw-text-yellow-500 tw-transition tw-duration-500 tw-font-bold tw-text-sm tw-my-2">${price} <span className="tw-text-red-500 tw-font-medium tw-ml-1 tw-line-through tw-text-sm">${price}</span></p>
                 <div className="tw-flex tw-justify-center tw-items-center tw-px-2">
