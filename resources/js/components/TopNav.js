@@ -12,7 +12,7 @@ export function TopNav(props) {
         <div className="tw-grid tw-grid-cols-12 tw-gap-1 tw-bg-white tw-px-5 tw-py-5">
             <div className="tw-col-span-full md:tw-col-span-2 tw-flex tw-justify-center md:tw-justify-start tw-items-center tw-gap-3">
                 <Link to="/" className="tw-flex gap-2">
-                    <img src="/images/bee.png" />
+                    <img src="/images/logo.png" />
                 </Link>
             </div>
             <div className="tw-col-span-full md:tw-col-span-7 tw-flex tw-flex-col md:tw-flex-row md:tw-flex tw-justify-center md:tw-justify-center tw-items-center tw-gap-5 tw-mt-5 md:tw-mt-0">

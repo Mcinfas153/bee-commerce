@@ -17,7 +17,7 @@ use App\Http\Controllers\Api\ProductController;
 |
 */
 
-Route::post('/register', [UserController::class, 'store'])->name('user.create');
+Route::post('/register', [UserController::class, 'resgiter'])->name('user.register');
 Route::post('/login', [UserController::class, 'login'])->name('user.login');
 Route::get('/categories', [CategoryController::class, 'index'])->name('category.index');
 Route::get('/products', [ProductController::class, 'index'])->name('products.list');
