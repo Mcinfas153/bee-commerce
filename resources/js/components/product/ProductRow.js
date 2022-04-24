@@ -21,7 +21,7 @@ export function ProductRow(props) {
         arrows: false,
         responsive: [
             {
-                breakpoint: 1200,
+                breakpoint: 1300,
                 settings: {
                     slidesToShow: 4,
                     slidesToScroll: 3,
@@ -29,7 +29,7 @@ export function ProductRow(props) {
                 }
             },
             {
-                breakpoint: 1024,
+                breakpoint: 1224,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 2,
@@ -37,7 +37,7 @@ export function ProductRow(props) {
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 800,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,

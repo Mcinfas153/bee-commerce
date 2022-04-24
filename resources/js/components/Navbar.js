@@ -13,7 +13,7 @@ export default function Navbar() {
 
     return (
         <>
-            <div className="tw-bg-blue-900 tw-p-3 tw-grid tw-grid-cols-5 tw-gap-10">
+            <div className="tw-bg-gray-600 tw-p-3 tw-grid tw-grid-cols-5 tw-gap-10">
                 <div className="tw-flex tw-flex-row tw-justify-between tw-align-items-center tw-col-span-full md:tw-col-span-1  md:tw-border-r tw-border-yellow-500 tw-cursor-pointer" onClick={handleShow}>
                     <p className="tw-uppercase tw-text-gray-50 tw-text-sm tw-font-bold hover:tw-text-white tw-cursor-pointer">All categories</p>
                     <span className="tw-px-3"><FontAwesomeIcon icon={faCaretDown} className="tw-text-gray-50 tw-text-2xl tw-font-bold tw--mt-2 hover:tw-text-white tw-cursor-pointer" /></span>

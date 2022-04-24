@@ -8,7 +8,7 @@ export default function TopBar() {
 
     return (
         alertShow &&
-        <div className="tw-topbar tw-bg-blue-900 tw-p-2">
+        <div className="tw-topbar tw-bg-yellow-300 tw-p-2">
             <div className="md:tw-grid md:tw-grid-cols-3">
                 <div class="tw-col-span-2 md:tw-flex md:tw-justify-start gap-5">
                     <div className="tw-flex tw-content-center gap-1 tw-my-1">
