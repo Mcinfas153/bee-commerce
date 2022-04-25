@@ -18,21 +18,19 @@ class OrderController extends Controller
 
         $todayOrders = DB::table('orders')
                 ->whereDate('created_at', date('Y-m-d'))
-                ->count();
+                ->get();
 
-        $confirmedOrders = DB::table('orders')
+        $returnOrders = DB::table('orders')
                 ->where([
                     ['user_id', '=', Auth::user()->id],
-                    ['order_status_id', '=', 3],
+                    ['order_status_id', '=', 6],
                 ])
-                ->count();
-        
-                $test = Order::find(5)->products;
+                ->get();
 
         return response()->json([
-            'test' => $test,
             'todayOrders' => $todayOrders,
-            'confirmOrders' => $confirmedOrders,
+            'todayOrdersCount' => count($todayOrders),
+            'returnOrdersCount' => count($returnOrders),
             'orderCount' => count($orders),
             'orders' => $orders,
         ]);

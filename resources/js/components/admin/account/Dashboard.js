@@ -5,7 +5,7 @@ import { listOrders } from '../store/actions/OrderActions'
 
 export function Dashboard(props) {
 
-    const { orderCount, todayOrders } = props.orders
+    const { orderCount, todayOrdersCount, returnOrdersCount } = props.orders
 
     useEffect(() => {
         props.listOrders();
@@ -17,10 +17,10 @@ export function Dashboard(props) {
                 <InfoBox color="red" value={orderCount} text="total orders" />
             </div>
             <div className="">
-                <InfoBox color="blue" value="160" text="returns" />
+                <InfoBox color="blue" value={returnOrdersCount} text="returns" />
             </div>
             <div className="">
-                <InfoBox color="green" value={todayOrders} text="today orders" />
+                <InfoBox color="green" value={todayOrdersCount} text="today orders" />
             </div>
         </div>
     )
