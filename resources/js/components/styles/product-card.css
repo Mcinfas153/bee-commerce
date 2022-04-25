@@ -1,0 +1,10 @@
+.productlabel {
+    border-right: 10px solid transparent;
+    border-top: 26px solid rgb(190 242 100);
+    position: absolute;
+}
+
+.productlabel>p {
+    margin-top: -25px;
+    text-align: center;
+}
