@@ -11,33 +11,33 @@ export default function Register() {
                     <p className='tw-text-md tw-font-light tw-text-center tw-text-yellow-300'>Sign up your account for free</p>
                     <form className="md:tw-my-5">
                         <div className="tw-mb-4">
-                            <p className="tw-mb-2 tw-ml-2 tw-text-sm tw-font-semibold tw-text-blue-900">First Name</p>
-                            <input type="text" id="firstName" className="form-control tw-w-full tw-rounded-full tw-py-2 tw-px-5 tw-mb-1 tw-bg-gray-100 focus:tw-border-blue-500" />
+                            <p className="tw-mb-2 tw-ml-2 tw-text-sm tw-font-semibold tw-text-gray-600">First Name</p>
+                            <input type="text" id="firstName" className="form-control tw-w-full tw-rounded-full tw-py-2 tw-px-5 tw-mb-1 tw-bg-gray-100 focus:tw-border-gray-300" />
                         </div>
                         <div className="tw-mb-4">
-                            <p className="tw-mb-2 tw-ml-2 tw-text-sm tw-font-semibold tw-text-blue-900">Last Name</p>
-                            <input type="text" id="lastName" className="form-control tw-w-full tw-rounded-full tw-py-2 tw-px-5 tw-mb-1 tw-bg-gray-100 focus:tw-border-blue-500" />
+                            <p className="tw-mb-2 tw-ml-2 tw-text-sm tw-font-semibold tw-text-gray-600">Last Name</p>
+                            <input type="text" id="lastName" className="form-control tw-w-full tw-rounded-full tw-py-2 tw-px-5 tw-mb-1 tw-bg-gray-100 focus:tw-border-gray-300" />
                         </div>
                         <div className="tw-mb-4">
-                            <p className="tw-mb-2 tw-ml-2 tw-text-sm tw-font-semibold tw-text-blue-900">Email Address</p>
-                            <input type="email" id="username" className="form-control tw-w-full tw-rounded-full tw-py-2 tw-px-5 tw-mb-1 tw-bg-gray-100 focus:tw-border-blue-500" />
+                            <p className="tw-mb-2 tw-ml-2 tw-text-sm tw-font-semibold tw-text-gray-600">Email Address</p>
+                            <input type="email" id="username" className="form-control tw-w-full tw-rounded-full tw-py-2 tw-px-5 tw-mb-1 tw-bg-gray-100 focus:tw-border-gray-300" />
                         </div>
                         <div className="tw-mb-4">
-                            <p className="tw-mb-2 tw-ml-2 tw-text-sm tw-font-semibold tw-text-blue-900">Password</p>
-                            <input type="password" id="password" className="form-control tw-w-full tw-rounded-full tw-py-2 tw-px-5 tw-mb-1 tw-bg-gray-100 focus:tw-border-blue-500" />
+                            <p className="tw-mb-2 tw-ml-2 tw-text-sm tw-font-semibold tw-text-gray-600">Password</p>
+                            <input type="password" id="password" className="form-control tw-w-full tw-rounded-full tw-py-2 tw-px-5 tw-mb-1 tw-bg-gray-100 focus:tw-border-gray-300" />
                         </div>
                         <div className="tw-grid tw-grid-cols-12 tw-gap-2 sm:tw-gap-1 tw-mt-10 md:tw-mt-5 tw-items-center">
                             <div className="tw-col-span-12 sm:tw-col-span-6 sm:tw-mx-auto">
-                                <button type="submit" className="btn tw-w-full tw-py-2 tw-px-10 md:tw-px-10 tw-rounded-full tw-bg-blue-900 hover:tw-bg-yellow-500 tw-text-white tw-font-bold">Sign up</button>
+                                <button type="submit" className="btn tw-w-full tw-py-2 tw-px-10 md:tw-px-10 tw-rounded-full tw-bg-gray-600 hover:tw-bg-yellow-300 tw-text-white tw-font-bold">Sign up</button>
                             </div>
                             <div className="tw-col-span-12 sm:tw-col-span-6 sm:tw-mx-auto">
-                                <button type="button" onClick={() => history.push("/login")} className="btn tw-w-full tw-py-2 tw-px-10 md:tw-px-10 tw-rounded-full tw-bg-yellow-500 hover:tw-bg-blue-900 tw-text-white tw-font-bold">Sign in</button>
+                                <button type="button" onClick={() => history.push("/login")} className="btn tw-w-full tw-py-2 tw-px-10 md:tw-px-10 tw-rounded-full tw-bg-yellow-300 hover:tw-bg-gray-600 tw-text-white tw-font-bold">Sign in</button>
                             </div>
                             <div className="tw-col-span-12 tw-mx-auto tw-mt-10 md:tw-mt-10">
-                                <a href="#" className="tw-underline tw-text-blue-900 hover:tw-text-yellow-500"><p>Already Have An Account?</p></a>
+                                <a href="login" className="tw-underline tw-text-gray-600 hover:tw-text-yellow-500"><p>Already Have An Account?</p></a>
                             </div>
                             <div className="tw-col-span-12 tw-mx-auto">
-                                <a href="/" className="tw-underline tw-text-blue-900 hover:tw-text-yellow-500"><p>Return to Store</p></a>
+                                <a href="/" className="tw-underline tw-text-gray-600 hover:tw-text-yellow-500"><p>Return to Store</p></a>
                             </div>
                         </div>
                     </form>

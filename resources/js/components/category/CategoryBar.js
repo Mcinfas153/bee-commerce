@@ -16,15 +16,23 @@ export function CategoryBar(props) {
         dots: false,
         className: "center",
         speed: 500,
-        slidesToShow: 10,
-        slidesToScroll: 4,
+        slidesToShow: 12,
+        slidesToScroll: 11,
         arrows: false,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1100,
                 settings: {
                     slidesToShow: 8,
-                    slidesToScroll: 4,
+                    slidesToScroll: 7,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 6,
+                    slidesToScroll: 5,
                     infinite: true,
                 }
             },
@@ -33,7 +41,7 @@ export function CategoryBar(props) {
                 settings: {
                     slidesToShow: 4,
                     slidesToScroll: 3,
-                    initialSlide: 4
+                    initialSlide: 3
                 }
             },
             {
@@ -41,7 +49,7 @@ export function CategoryBar(props) {
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 2,
-                    initialSlide: 3
+                    initialSlide: 2
                 }
             }
         ]

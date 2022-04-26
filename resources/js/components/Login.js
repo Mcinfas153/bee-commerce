@@ -39,27 +39,27 @@ export function Login(props) {
                         </div>
                         <p className='tw-text-md tw-font-light tw-text-center tw-text-yellow-300'>Sign in to start your shopping</p>
                         <div className="tw-my-5">
-                            <p className="tw-mb-2 tw-ml-2 tw-text-sm tw-font-semibold tw-text-blue-900">Username</p>
-                            <input type="email" id="username" {...register("email")} className="form-control tw-w-full tw-rounded-full tw-py-2 tw-px-5 tw-mb-1 tw-bg-gray-100 focus:tw-border-blue-500" />
-                            <p className="tw-text-red-600 tw-ml-3">{errors.email?.message}</p>
+                            <p className="tw-mb-2 tw-ml-2 tw-text-sm tw-font-semibold tw-text-gray-600">Username</p>
+                            <input type="email" id="username" {...register("email")} className="form-control tw-w-full tw-rounded-full tw-py-2 tw-px-5 tw-mb-1 tw-bg-gray-100 focus:tw-border-gray-300" />
+                            <p className="tw-text-gray-600 tw-ml-3">{errors.email?.message}</p>
                         </div>
                         <div className="tw-mb-4">
-                            <p className="tw-mb-2 tw-ml-2 tw-text-sm tw-font-semibold tw-text-blue-900">Password</p>
-                            <input type="password" id="password" {...register("password")} className="form-control tw-w-full tw-rounded-full tw-py-2 tw-px-5 tw-mb-1 tw-bg-gray-100 focus:tw-border-blue-500" />
-                            <p className="tw-text-red-600 tw-ml-3">{errors.password?.message}</p>
+                            <p className="tw-mb-2 tw-ml-2 tw-text-sm tw-font-semibold tw-text-gray-600">Password</p>
+                            <input type="password" id="password" {...register("password")} className="form-control tw-w-full tw-rounded-full tw-py-2 tw-px-5 tw-mb-1 tw-bg-gray-100 focus:tw-border-gray-300" />
+                            <p className="tw-text-gray-600 tw-ml-3">{errors.password?.message}</p>
                         </div>
                         <div className="tw-grid tw-grid-cols-12 tw-gap-2 sm:tw-gap-1 tw-mt-10 md:tw-mt-5 tw-items-center">
                             <div className="tw-col-span-12 sm:tw-col-span-6 sm:tw-mx-auto">
-                                <button type="submit" className="btn tw-w-full tw-py-2 tw-px-10 md:tw-px-10 tw-rounded-full tw-bg-blue-900 hover:tw-bg-yellow-500 tw-text-white tw-font-bold">Sign in</button>
+                                <button type="submit" className="btn tw-w-full tw-py-2 tw-px-10 md:tw-px-10 tw-rounded-full tw-bg-gray-600 hover:tw-bg-yellow-300 tw-text-white tw-font-bold">Sign in</button>
                             </div>
                             <div className="tw-col-span-12 sm:tw-col-span-6 sm:tw-mx-auto">
-                                <button type="button" onClick={() => history.push("/")} className="btn tw-w-full tw-py-2 tw-px-10 md:tw-px-10 tw-rounded-full tw-bg-yellow-500 hover:tw-bg-blue-900 tw-text-white tw-font-bold">Resgister</button>
+                                <button type="button" onClick={() => history.push("/register")} className="btn tw-w-full tw-py-2 tw-px-10 md:tw-px-10 tw-rounded-full tw-bg-yellow-300 hover:tw-bg-gray-600 tw-text-white tw-font-bold">Resgister</button>
                             </div>
                             <div className="tw-col-span-12 tw-mx-auto tw-mt-10 md:tw-mt-10">
-                                <a href="#" className="tw-underline tw-text-blue-900 hover:tw-text-yellow-500"><p>Forgot Your Password?</p></a>
+                                <a href="#" className="tw-underline tw-text-gray-600 hover:tw-text-yellow-300"><p>Forgot Your Password?</p></a>
                             </div>
                             <div className="tw-col-span-12 tw-mx-auto">
-                                <a href="/" className="tw-underline tw-text-blue-900 hover:tw-text-yellow-500"><p>Return to Store</p></a>
+                                <a href="/" className="tw-underline tw-text-gray-600 hover:tw-text-yellow-300"><p>Return to Store</p></a>
                             </div>
                         </div>
                     </form>

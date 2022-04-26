@@ -27,7 +27,7 @@ export default function TopBar() {
                 <div class="tw-col-span-1 md:tw-flex md:tw-justify-end">
                     <div className="tw-flex tw-content-center gap-1 tw-my-1">
                         <img src="https://framestrapimaster.blob.core.windows.net/assets/images/fast_delivery_17b9ee4153_d668dca9eb_a8fdc87713.svg" className="tw-h-4" />
-                        <p className="tw-text-gray-50 tw-text-xs tw-font-medium tw-tracking-wide">800-732-32</p>
+                        <p className="tw-text-gray-50 tw-text-xs tw-font-medium tw-tracking-wide">+94 76 487 8633</p>
                     </div>
                 </div>
             </div>

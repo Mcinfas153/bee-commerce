@@ -9,7 +9,7 @@ export default function CategoryRound(props) {
     return (
         <Link to={`/category/${id}/products`}>
             <div className="categoryRound mx-auto tw-transition tw-duration-500 tw-ease-in-out tw-transform hover:tw-translate-y-1 hover:tw-scale-105">
-                <img src={image} className="rounded-circle tw-cursor-pointer mx-auto tw-w-16 md:tw-w-20 lg:tw-w-20 xl:tw-w-24" />
+                <img src={image} className="rounded-circle tw-cursor-pointer mx-auto tw-w-16 md:tw-w-20 lg:tw-w-20 xl:tw-w-20" />
                 <p className="tw-font-bold tw-text-xs text-center tw-my-3">
                     <TextTruncate line={2} element="span" truncateText="…" text={name} />
                 </p>

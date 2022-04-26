@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAward, faBolt, faCaretDown, faCarrot, faFemale, faGift, faHome, faIdBadge, faLeaf, faMale, faPercent, faPercentage, faSpider } from '@fortawesome/free-solid-svg-icons'
+import { faBolt, faCaretDown, faFemale, faHome, faLaptop, faLeaf, faMale, faSnowman, faVolleyballBall } from '@fortawesome/free-solid-svg-icons'
 import { Offcanvas,Dropdown } from 'react-bootstrap';
 
 export default function Navbar() {
@@ -13,16 +13,16 @@ export default function Navbar() {
 
     return (
         <>
-            <div className="tw-bg-gray-600 tw-p-3 tw-grid tw-grid-cols-6 tw-gap-10">
-                <div className="tw-flex tw-flex-row tw-justify-between tw-align-items-center tw-col-span-full md:tw-col-span-1  md:tw-border-r tw-cursor-pointer" onClick={handleShow}>
+            <div className="tw-bg-gray-600 tw-p-3 tw-grid md:tw-grid-cols-8 lg:tw-grid-cols-6 tw-gap-10">
+                <div className="tw-flex tw-flex-row tw-justify-between tw-align-items-center tw-col-span-full md:tw-col-span-2 lg:tw-col-span-1  md:tw-border-r tw-cursor-pointer" onClick={handleShow}>
                     <p className="tw-text-gray-50 tw-text-xs tw-font-bold hover:tw-text-white tw-cursor-pointer">All categories</p>
                     <span className="tw-px-5"><FontAwesomeIcon icon={faCaretDown} className="tw-text-gray-50 tw-text-xl tw-font-bold tw--mt-2 hover:tw-text-white tw-cursor-pointer" /></span>
                 </div>
-                <div className="tw-col-span-full md:tw-col-span-4 tw-hidden md:tw-block">
-                    <ul className="tw-flex tw-flex-row tw-gap-10 ">
+                <div className="tw-col-span-full md:tw-col-span-4 lg:tw-col-span-4 tw-hidden md:tw-block">
+                    <ul className="tw-flex tw-flex-row tw-gap-5 lg:tw-gap-10">
                         <li className="tw-text-white tw-text-xs">
                             <Link to={`/category/1/products`} className="tw-font-bold hover:tw-text-yellow-300 tw-flex tw-items-center">
-                                <FontAwesomeIcon icon={faBolt} className="tw-text-gray-50 tw-text-md hover:tw-text-yellow-300 tw-cursor-pointer tw-mr-1" />
+                                <FontAwesomeIcon icon={faLaptop} className="tw-text-gray-50 tw-text-md hover:tw-text-yellow-300 tw-cursor-pointer tw-mr-1" />
                                 <p>Electronics</p>
                             </Link>
                         </li>
@@ -40,23 +40,29 @@ export default function Navbar() {
                         </li>
                         <li className="tw-text-white tw-text-xs">
                             <Link to={`/category/1/products`} className="tw-font-bold hover:tw-text-yellow-300 tw-flex tw-items-center">
-                                <FontAwesomeIcon icon={faLeaf} className="tw-text-gray-50 tw-text-md hover:tw-text-yellow-300 tw-cursor-pointer tw-mr-1" />
+                                <FontAwesomeIcon icon={faHome} className="tw-text-gray-50 tw-text-md hover:tw-text-yellow-300 tw-cursor-pointer tw-mr-1" />
                                 <p>Home</p>
                             </Link>
                         </li>
                         <li className="tw-text-white tw-text-xs">
-                            <Link to={`/category/5/products`} className="tw-font-bold hover:tw-text-yellow-300">Grocery</Link>
+                            <Link to={`/category/1/products`} className="tw-font-bold hover:tw-text-yellow-300 tw-flex tw-items-center">
+                                <FontAwesomeIcon icon={faLeaf} className="tw-text-gray-50 tw-text-md hover:tw-text-yellow-300 tw-cursor-pointer tw-mr-1" />
+                                <p>Grocery</p>
+                            </Link>
                         </li>
                         <li className="tw-text-white tw-text-xs">
-                            <Link to={`/category/6/products`} className="tw-font-bold hover:tw-text-yellow-300">Sports</Link>
+                            <Link to={`/category/1/products`} className="tw-font-bold hover:tw-text-yellow-300 tw-flex tw-items-center">
+                                <FontAwesomeIcon icon={faVolleyballBall} className="tw-text-gray-50 tw-text-md hover:tw-text-yellow-300 tw-cursor-pointer tw-mr-1" />
+                                <p>Sports</p>
+                            </Link>
                         </li>
                     </ul>
                 </div>
-                <div className="tw-col-span-full md:tw-col-span-1 tw-hidden md:tw-block">
+                <div className="tw-col-span-full md:tw-col-span-2 lg:tw-col-span-1 tw-hidden md:tw-block">
                     <ul className="tw-flex tw-flex-row tw-gap-10 tw-float-right tw-px-5">
                         <li className="tw-text-white tw-text-xs">
                             <Link to={`/category/1/products`} className="tw-font-bold hover:tw-text-yellow-300 tw-flex tw-items-center">
-                                <FontAwesomeIcon icon={faSpider} className="tw-text-gray-50 tw-text-lg tw-font-semibold hover:tw-text-yellow-300 tw-cursor-pointer tw-mr-1" />
+                                <FontAwesomeIcon icon={faSnowman} className="tw-text-gray-50 tw-text-md tw-font-semibold tw-cursor-pointer tw-mr-1" />
                                 <p>Special Offers</p>
                             </Link>
                         </li>

@@ -31,9 +31,9 @@ export function TopNav(props) {
                         </>
                         :
                         <>
-                            <Link to="/login"><span className="tw-cursor-pointer tw-text-yellow-500 hover:tw-text-blue-900 tw-text-sm ">Sign In <FontAwesomeIcon title="Login" icon={faUser} className="tw-ml-2" /></span></Link>
-                            <div className="tw-border-r-2 tw-border-yellow-500 tw-h-5"></div>
-                            <Link to="/cart"><span className="tw-cursor-pointer tw-text-yellow-500 hover:tw-text-blue-900 tw-text-lg"><FontAwesomeIcon icon={faShoppingCart} /></span></Link>
+                            <Link to="/login"><span className="tw-cursor-pointer tw-text-yellow-300 hover:tw-text-gray-700 tw-text-sm ">Sign In <FontAwesomeIcon title="Login" icon={faUser} className="tw-ml-2" /></span></Link>
+                            <div className="tw-border-r-2 tw-border-yellow-300 tw-h-5"></div>
+                            <Link to="/cart"><span className="tw-cursor-pointer tw-text-yellow-300 hover:tw-text-gray-700 tw-text-lg"><FontAwesomeIcon title='My Cart' icon={faShoppingCart} /></span></Link>
                         </>
                 }
             </div>
