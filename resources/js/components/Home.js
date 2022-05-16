@@ -9,6 +9,7 @@ import ProductRow from './product/ProductRow';
 import Carousel from 'react-bootstrap/Carousel';
 import CategoryCard from './category/CategoryCard';
 import Instagram from './Instagram';
+import CarouselCategory from './category/CarouselCategory';
 
 export function Home(props) {
 
@@ -20,16 +21,16 @@ export function Home(props) {
 
     return (
         <div>
-            <div className='tw-mb-8'>
+            <div className='tw-mb-8 tw-mt-2'>
                 <Carousel>
                     <Carousel.Item>
-                        <img className="d-block w-100" src="/images/banner/slide-1.jpg" alt="First slide"/>
+                        <img className="d-block w-100" src="/images/banner/slide-1.jpg" alt="First slide" loading='lazy'/>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img className="d-block w-100" src="/images/banner/slide-2.jpg" alt="Second slide"/>
+                        <img className="d-block w-100" src="/images/banner/slide-2.jpg" alt="Second slide" loading='lazy'/>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img className="d-block w-100" src="/images/banner/slide-3.jpg" alt="Third slide"/>
+                        <img className="d-block w-100" src="/images/banner/slide-3.jpg" alt="Third slide" loading='lazy'/>
                     </Carousel.Item>
                 </Carousel>
             </div>
@@ -45,19 +46,22 @@ export function Home(props) {
                     ))
                 }
             </div>
-            <div className="tw-my-5 md:tw-my-10 tw-mx-5 lg:tw-mx-10">
+            <div className="tw-mx-8 tw-mt-5">
                 <ProductRow id="3" name="Clothing & Accessories" category_id={6} />
             </div>
-            <div className="tw-my-5 md:tw-my-10 tw-mx-5 lg:tw-mx-10">
+            <div className="tw-mx-8 tw-mt-5">
                 <ProductRow id="4" name="Electronics" category_id={12} />
             </div>
-            <div className="tw-my-5 md:tw-my-10 tw-mx-5 lg:tw-mx-10">
+            <div className='tw-mx-5 tw-mt-5'>
+                <CarouselCategory />
+            </div>
+            <div className="tw-mx-8 tw-mt-5">
                 <ProductRow id="1" name="Health & Beauty" category_id={8} />
             </div>
-            <div className="tw-my-5 md:tw-my-10 tw-mx-5 lg:tw-mx-10">
+            <div className="tw-mx-8 tw-mt-5">
                 <ProductRow id="2" name="Business & Industrial" category_id={9} />
             </div>
-            <div className="tw-my-5 md:tw-my-10 tw-mx-5 lg:tw-mx-10">
+            <div className="tw-mx-5 tw-mt-5">
                 <div className='tw-grid sm:tw-grid-cols-2 lg:tw-grid-cols-4 tw-gap-4'>
                     <CategoryCard name="Business & Industrial" id="1"/>
                     <CategoryCard name="Health & Beauty" id="2" />

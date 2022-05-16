@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBolt, faCaretDown, faFemale, faHome, faLaptop, faLeaf, faMale, faSnowman, faVolleyballBall } from '@fortawesome/free-solid-svg-icons'
-import { Offcanvas,Dropdown } from 'react-bootstrap';
+import { faCaretDown, faCog, faCoins, faDollarSign, faFemale, faFunnelDollar, faHashtag, faHeadphones, faHome, faLaptop, faLeaf, faMale, faMobile, faSearchDollar, faSnowman, faUserCircle, faVolleyballBall } from '@fortawesome/free-solid-svg-icons'
+import { Offcanvas,Dropdown } from 'react-bootstrap'
+import { Accordion } from 'react-bootstrap';
 
 export default function Navbar() {
 
@@ -74,43 +75,42 @@ export default function Navbar() {
                 <Offcanvas.Header closeButton>
                     <Offcanvas.Title className='tw-font-bold tw-text-gray-600'>All Categories</Offcanvas.Title>
                 </Offcanvas.Header>
-                <hr />
-                <Offcanvas.Body className='tw-px-3 tw-py-3'>
-                    <p className='tw-text-md tw-text-yellow-300'>Nothing to show here any categories. Still in working progress.</p>
-                    {/* <ul className="">
-                        <li className="tw-py-3 tw-px-5 tw-text-white tw-bg-yellow-500 tw-border tw-rounded tw-text-sm tw-font-bold hover:tw-text-blue-900">
-                            <Link to={`/category/1/products`}>Baby & Toddler</Link>
-                        </li>
-                        <li className="tw-py-3 tw-px-5 tw-text-white tw-bg-yellow-500 tw-border tw-rounded tw-text-sm tw-font-bold hover:tw-text-blue-900">
-                            <Link to={`/category/2/products`}>Office Supplies</Link>
-                        </li>
-                        <li className="tw-py-3 tw-px-5 tw-text-white tw-bg-yellow-500 tw-border tw-rounded tw-text-sm tw-font-bold hover:tw-text-blue-900">
-                            <Link to={`/category/3/products`}>Health & Beauty</Link>
-                        </li>
-                        <li className="tw-py-3 tw-px-5 tw-text-white tw-bg-yellow-500 tw-border tw-rounded tw-text-sm tw-font-bold hover:tw-text-blue-900">
-                            <Link to={`/category/4/products`}>Toys & Games</Link>
-                        </li>
-                        <li className="tw-py-3 tw-px-5 tw-text-white tw-bg-yellow-500 tw-border tw-rounded tw-text-sm tw-font-bold hover:tw-text-blue-900">
-                            <Link to={`/category/5/products`}>Furnitures</Link>
-                        </li>
-                        <li className="tw-py-3 tw-px-5 tw-text-white tw-bg-yellow-500 tw-border tw-rounded tw-text-sm tw-font-bold hover:tw-text-blue-900">
-                            <Link to={`/category/6/products`}>Home Appliances</Link>
-                        </li>
-                        <Dropdown className='tw-bg-yellow-500'>
-                            <Dropdown.Toggle className="tw-w-full text-start tw-py-3 tw-px-5 tw-text-white tw-border tw-rounded tw-text-sm tw-font-bold tw-bg-yellow-500 hover:tw-text-blue-900 tw-border-none" id="dropdown-item-button">
-                                Clothes
-                            </Dropdown.Toggle>
-
-                            <Dropdown.Menu>
-                                <Dropdown.Item href="#/action-1">Shirts</Dropdown.Item>
-                                <Dropdown.Item href="#/action-2">Jeans</Dropdown.Item>
-                                <Dropdown.Item href="#/action-3">Skirts</Dropdown.Item>
-                            </Dropdown.Menu>
-                        </Dropdown>
-                        <li className="tw-py-3 tw-px-5 tw-text-white tw-bg-yellow-500 tw-border tw-rounded tw-text-sm tw-font-bold hover:tw-text-blue-900">
-                            <Link className='tw-flex tw-justify-between tw-items-center' to={`/category/7/products`}>Clothes <img src="https://img.icons8.com/fluency-systems-filled/15/ffffff/chevron-down--v2.png"/></Link>
-                        </li>
-                    </ul> */}
+                <Offcanvas.Body className='p-0'>
+                    <Accordion>
+                        <Accordion.Item eventKey="0" className='tw-border-bottom tw-py-0'>
+                            <Accordion.Header className='tw-bg-white'><FontAwesomeIcon icon={faHashtag} className="tw-mr-1 tw-text-sm" /> Trending Categories</Accordion.Header>
+                            <Accordion.Body className='tw-bg-white p-0'>
+                                <Link>
+                                    <li className='tw-list-none tw-px-8 tw-py-2 tw-border'><FontAwesomeIcon icon={faLaptop} className="tw-mr-1 tw-text-sm" /> Electronics</li>
+                                </Link>
+                                <Link>
+                                    <li className='tw-list-none tw-px-8 tw-py-2 tw-border'><FontAwesomeIcon icon={faHome} className="tw-mr-1 tw-text-sm" /> Home Appliances</li>
+                                </Link>
+                                <Link>
+                                    <li className='tw-list-none tw-px-8 tw-py-2 tw-border'><FontAwesomeIcon icon={faLeaf} className="tw-mr-1 tw-text-sm" /> Groceries</li>
+                                </Link>
+                                <Link>
+                                    <li className='tw-list-none tw-px-8 tw-py-2 tw-border'><FontAwesomeIcon icon={faSnowman} className="tw-mr-1 tw-text-sm" /> Event Products</li>
+                                </Link>
+                            </Accordion.Body>
+                        </Accordion.Item>
+                    </Accordion>
+                    <Link to={`category/2/products`}>
+                        <li className='tw-list-none tw-px-5 tw-py-3 tw-border'><FontAwesomeIcon icon={faMobile} className="tw-mr-1 tw-text-sm" /> Dwonload Apps</li>
+                    </Link>
+                    <Link to={`category/2/products`}>
+                        <li className='tw-list-none tw-px-5 tw-py-3 tw-border'><FontAwesomeIcon icon={faCoins} className="tw-mr-1 tw-text-sm" /> Profit with us</li>
+                    </Link>
+                    <Link to={`category/2/products`}>
+                        <li className='tw-list-none tw-px-5 tw-py-3 tw-border'><FontAwesomeIcon icon={faHeadphones} className="tw-mr-1 tw-text-sm" /> Customer Services</li>
+                    </Link>
+                    <Link to={`category/2/products`}>
+                        <li className='tw-list-none tw-px-5 tw-py-3 tw-border'><FontAwesomeIcon icon={faUserCircle} className="tw-mr-1 tw-text-sm" /> User Informations</li>
+                    </Link>
+                    
+                    <Link to={`category/2/products`}>
+                        <li className='tw-list-none tw-px-5 tw-py-3 tw-border'><FontAwesomeIcon icon={faCog} className="tw-mr-1 tw-text-sm" /> Settings</li>
+                    </Link>
                 </Offcanvas.Body>
             </Offcanvas>
         </>

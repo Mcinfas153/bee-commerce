@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import truncate from 'truncate'
 import '../styles/product-card.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart, faCartPlus,faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 
 export default function ProductBox(props) {
 
@@ -25,7 +27,7 @@ export default function ProductBox(props) {
                     <p className="tw-text-center tw-text-gray-600 tw-font-normal tw-text-xs tw-my-2 tw-px-2">${price} with Subscribe & Save discount</p>
                     <p className="tw-text-center tw-text-gray-600 tw-font-bold tw-text-xs tw-my-2">Ships to Sri lanka</p>
                     <div className="tw-flex tw-justify-between tw-items-center tw-pt-1 tw-px-5">
-                        <button className="tw-bg-gray-600 hover:tw-bg-yellow-500 tw-px-2 tw-py-2 tw-rounded-full tw-transition tw-duration-500 tw-ease-in-out tw-transform hover:tw-scale-110"><img src="https://img.icons8.com/material-outlined/20/ffffff/like--v2.png" className="" title='Add to wishlist'/></button>
+                        <button className="tw-bg-gray-600 tw-transition tw-duration-500 hover:tw-bg-yellow-500 tw-px-2.5 tw-py-1.5 tw-rounded-full"><FontAwesomeIcon icon={faHeart} className="tw-text-white tw-text-md" title='Add to wishlist' /></button>
                         <div className="tw-flex tw-justify-center tw-items-center tw-px-2">
                             <img src="https://img.icons8.com/fluency/20/000000/star.png"/>
                             <img src="https://img.icons8.com/fluency/20/000000/star.png"/>
@@ -33,11 +35,11 @@ export default function ProductBox(props) {
                             <img src="https://img.icons8.com/fluency/20/000000/star.png"/>
                             <img src="https://img.icons8.com/fluency/20/000000/star.png"/>
                         </div>
-                        <button className="tw-bg-gray-600 hover:tw-bg-yellow-500 tw-px-2 tw-py-2 tw-rounded-full tw-transition tw-duration-500 tw-ease-in-out tw-transform hover:tw-scale-110"><img src="https://img.icons8.com/material-outlined/20/ffffff/shopping-cart--v1.png" title='Add to cart'/></button>
+                        <button className="tw-bg-gray-600 tw-transition tw-duration-500 hover:tw-bg-yellow-500 tw-px-2.5 tw-py-1.5 tw-rounded-full"><FontAwesomeIcon icon={faCartPlus} className="tw-text-white tw-text-md" title='Add to cart' /></button>
                     </div>
                     <div className="tw-pt-3">
                         <Link to={`/product/${id}`}>
-                            <button className="tw-bg-yellow-400 hover:tw-bg-gray-600 tw-w-full tw-text-white tw-py-2 tw-rounded-bl-sm tw-rounded-br-sm tw-flex tw-justify-center tw-items-center tw-transition tw-duration-500"><img src="https://img.icons8.com/material-outlined/18/ffffff/info.png" className="tw-mr-1" title='View more'/> More Info</button>
+                            <button className="tw-bg-yellow-400 hover:tw-bg-gray-600 tw-w-full tw-text-white tw-py-2 tw-rounded-bl-sm tw-rounded-br-sm tw-flex tw-justify-center tw-items-center tw-transition tw-duration-500"><FontAwesomeIcon icon={faInfoCircle} className="tw-text-white tw-text-md tw-mr-1" title='Add to cart' /> More Info</button>
                         </Link>
                     </div>
                 </div>
