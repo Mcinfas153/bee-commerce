@@ -19,6 +19,7 @@ import ProtectedRoute from './ProtectedRoute';
 import Alert from './Alert';
 import ProductsPage from './product/ProductsPage';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Settings from './Settings';
 
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
 
@@ -40,6 +41,9 @@ function App() {
                         </Route>
                         <Route path="/register">
                             <Register />
+                        </Route>
+                        <Route path="/settings">
+                            <Settings />
                         </Route>
                         <ProtectedRoute path="/cart" component={ShoppingCart} />
                         <ProtectedRoute path="/my-account" component={MyAccount} />
