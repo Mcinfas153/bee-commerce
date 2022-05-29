@@ -21,7 +21,7 @@ export function Home(props) {
 
     return (
         <div>
-            <div className='tw-mb-8 tw-mt-2'>
+            <div className='tw-mb-8 md:tw-mt-2'>
                 <Carousel>
                     <Carousel.Item>
                         <img className="d-block w-100" src="/images/banner/slide-1.jpg" alt="First slide" loading='lazy'/>

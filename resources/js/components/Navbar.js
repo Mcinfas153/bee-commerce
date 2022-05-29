@@ -23,47 +23,47 @@ export default function Navbar() {
                     <ul className="tw-flex tw-flex-row tw-gap-5 lg:tw-gap-10">
                         <li className="tw-text-white tw-text-xs">
                             <Link to={`/category/1/products`} className="tw-font-bold hover:tw-text-yellow-300 tw-flex tw-items-center">
-                                <FontAwesomeIcon icon={faLaptop} className="tw-text-gray-50 tw-text-md hover:tw-text-yellow-300 tw-cursor-pointer tw-mr-1" />
+                                <FontAwesomeIcon icon={faLaptop} className="tw-text-md hover:tw-text-yellow-300 tw-cursor-pointer tw-mr-1" />
                                 <p>Electronics</p>
                             </Link>
                         </li>
                         <li className="tw-text-white tw-text-xs">
                             <Link to={`/category/1/products`} className="tw-font-bold hover:tw-text-yellow-300 tw-flex tw-items-center">
-                                <FontAwesomeIcon icon={faMale} className="tw-text-gray-50 tw-text-md hover:tw-text-yellow-300 tw-cursor-pointer tw-mr-1" />
+                                <FontAwesomeIcon icon={faMale} className="tw-text-md hover:tw-text-yellow-300 tw-cursor-pointer tw-mr-1" />
                                 <p>Men</p>
                             </Link>
                         </li>
                         <li className="tw-text-white tw-text-xs">
                             <Link to={`/category/1/products`} className="tw-font-bold hover:tw-text-yellow-300 tw-flex tw-items-center">
-                                <FontAwesomeIcon icon={faFemale} className="tw-text-gray-50 tw-text-md hover:tw-text-yellow-300 tw-cursor-pointer tw-mr-1" />
+                                <FontAwesomeIcon icon={faFemale} className="tw-text-md hover:tw-text-yellow-300 tw-cursor-pointer tw-mr-1" />
                                 <p>Women</p>
                             </Link>                        
                         </li>
                         <li className="tw-text-white tw-text-xs">
                             <Link to={`/category/1/products`} className="tw-font-bold hover:tw-text-yellow-300 tw-flex tw-items-center">
-                                <FontAwesomeIcon icon={faHome} className="tw-text-gray-50 tw-text-md hover:tw-text-yellow-300 tw-cursor-pointer tw-mr-1" />
+                                <FontAwesomeIcon icon={faHome} className="tw-text-md hover:tw-text-yellow-300 tw-cursor-pointer tw-mr-1" />
                                 <p>Home</p>
                             </Link>
                         </li>
                         <li className="tw-text-white tw-text-xs">
                             <Link to={`/category/1/products`} className="tw-font-bold hover:tw-text-yellow-300 tw-flex tw-items-center">
-                                <FontAwesomeIcon icon={faLeaf} className="tw-text-gray-50 tw-text-md hover:tw-text-yellow-300 tw-cursor-pointer tw-mr-1" />
+                                <FontAwesomeIcon icon={faLeaf} className="tw-text-md hover:tw-text-yellow-300 tw-cursor-pointer tw-mr-1" />
                                 <p>Grocery</p>
                             </Link>
                         </li>
                         <li className="tw-text-white tw-text-xs">
                             <Link to={`/category/1/products`} className="tw-font-bold hover:tw-text-yellow-300 tw-flex tw-items-center">
-                                <FontAwesomeIcon icon={faVolleyballBall} className="tw-text-gray-50 tw-text-md hover:tw-text-yellow-300 tw-cursor-pointer tw-mr-1" />
+                                <FontAwesomeIcon icon={faVolleyballBall} className="tw-text-md hover:tw-text-yellow-300 tw-cursor-pointer tw-mr-1" />
                                 <p>Sports</p>
                             </Link>
                         </li>
                     </ul>
                 </div>
-                <div className="tw-col-span-full md:tw-col-span-2 lg:tw-col-span-1 tw-hidden md:tw-block">
+                <div className="tw-col-span-full lg:tw-col-span-1 tw-hidden lg:tw-block">
                     <ul className="tw-flex tw-flex-row tw-gap-10 tw-float-right tw-px-5">
-                        <li className="tw-text-white tw-text-xs">
+                        <li className="tw-text-white tw-text-xs hover:tw-text-yellow-300">
                             <Link to={`/category/1/products`} className="tw-font-bold hover:tw-text-yellow-300 tw-flex tw-items-center">
-                                <FontAwesomeIcon icon={faSnowman} className="tw-text-gray-50 tw-text-md tw-font-semibold tw-cursor-pointer tw-mr-1" />
+                                <FontAwesomeIcon icon={faSnowman} className="tw-text-md tw-font-semibold tw-cursor-pointer tw-mr-1" />
                                 <p>Special Offers</p>
                             </Link>
                         </li>
@@ -76,41 +76,40 @@ export default function Navbar() {
                     <Offcanvas.Title className='tw-font-bold tw-text-gray-600'>All Categories</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body className='p-0'>
-                    <Accordion>
+                    <Accordion className='tw-bg-white'>
                         <Accordion.Item eventKey="0" className='tw-border-bottom tw-py-0'>
                             <Accordion.Header className='tw-bg-white'><FontAwesomeIcon icon={faHashtag} className="tw-mr-1 tw-text-sm" /> Trending Categories</Accordion.Header>
                             <Accordion.Body className='tw-bg-white p-0'>
-                                <Link>
+                                <a href="/category/3/products">
                                     <li className='tw-list-none tw-px-8 tw-py-2 tw-border'><FontAwesomeIcon icon={faLaptop} className="tw-mr-1 tw-text-sm" /> Electronics</li>
-                                </Link>
-                                <Link>
+                                </a>
+                                <a href="/category/4/products">
                                     <li className='tw-list-none tw-px-8 tw-py-2 tw-border'><FontAwesomeIcon icon={faHome} className="tw-mr-1 tw-text-sm" /> Home Appliances</li>
-                                </Link>
-                                <Link>
+                                </a>
+                                <a href="/category/4/products">
                                     <li className='tw-list-none tw-px-8 tw-py-2 tw-border'><FontAwesomeIcon icon={faLeaf} className="tw-mr-1 tw-text-sm" /> Groceries</li>
-                                </Link>
-                                <Link>
+                                </a>
+                                <a href="/category/5/products">
                                     <li className='tw-list-none tw-px-8 tw-py-2 tw-border'><FontAwesomeIcon icon={faSnowman} className="tw-mr-1 tw-text-sm" /> Event Products</li>
-                                </Link>
+                                </a>
                             </Accordion.Body>
                         </Accordion.Item>
                     </Accordion>
-                    <Link to={`category/2/products`}>
+                    <a href="/download-app">
                         <li className='tw-list-none tw-px-5 tw-py-3 tw-border'><FontAwesomeIcon icon={faMobile} className="tw-mr-1 tw-text-sm" /> Dwonload Apps</li>
-                    </Link>
-                    <Link to={`category/2/products`}>
+                    </a>
+                    <a href="/category/1/products">
                         <li className='tw-list-none tw-px-5 tw-py-3 tw-border'><FontAwesomeIcon icon={faCoins} className="tw-mr-1 tw-text-sm" /> Profit with us</li>
-                    </Link>
-                    <Link to={`category/2/products`}>
+                    </a>
+                    <a href="/category/2/products">
                         <li className='tw-list-none tw-px-5 tw-py-3 tw-border'><FontAwesomeIcon icon={faHeadphones} className="tw-mr-1 tw-text-sm" /> Customer Services</li>
-                    </Link>
-                    <Link to={`category/2/products`}>
+                    </a>
+                    <a href="/category/3/products">
                         <li className='tw-list-none tw-px-5 tw-py-3 tw-border'><FontAwesomeIcon icon={faUserCircle} className="tw-mr-1 tw-text-sm" /> User Informations</li>
-                    </Link>
-                    
-                    <Link to={`category/2/products`}>
+                    </a>
+                    <a href='/settings'>
                         <li className='tw-list-none tw-px-5 tw-py-3 tw-border'><FontAwesomeIcon icon={faCog} className="tw-mr-1 tw-text-sm" /> Settings</li>
-                    </Link>
+                    </a>
                 </Offcanvas.Body>
             </Offcanvas>
         </>

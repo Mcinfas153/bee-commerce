@@ -9,7 +9,7 @@ export default function Settings() {
         <Link>
           <div className='tw-flex tw-justify-start tw-items-center tw-bg-white tw-border tw-py-3 tw-px-5 tw-rounded'>
             <div className='tw-mr-3'>
-              <img src="https://img.icons8.com/color/75/touch-id.png" alt="" className='tw-rounded-full' />
+              <img src="https://img.icons8.com/color/75/touch-id.png" alt="" className='tw-rounded-full' loading='lazy' />
             </div>
             <div>
               <p className='tw-text-gray-700 tw-font-semibold'>
@@ -22,7 +22,7 @@ export default function Settings() {
         <Link>
           <div className='tw-flex tw-justify-start tw-items-center tw-bg-white tw-border tw-py-3 tw-px-5 tw-rounded'>
             <div className='tw-mr-3'>
-              <img src="https://img.icons8.com/color/75/moderator-male--v1.png" alt="" className='tw-rounded-full' />
+              <img src="https://img.icons8.com/color/75/moderator-male--v1.png" alt="" className='tw-rounded-full' loading='lazy' />
             </div>
             <div>
               <p className='tw-text-gray-700 tw-font-semibold'>Bee Premium</p>
@@ -33,7 +33,7 @@ export default function Settings() {
         <Link>
           <div className='tw-flex tw-justify-start tw-items-center tw-bg-white tw-border tw-py-3 tw-px-5 tw-rounded'>
             <div className='tw-mr-3'>
-              <img src="https://img.icons8.com/color/75/gift-under.png" alt="" className='tw-rounded-full' />
+              <img src="https://img.icons8.com/color/75/gift-under.png" alt="" className='tw-rounded-full' loading='lazy' />
             </div>
             <div>
               <p className='tw-text-gray-700 tw-font-semibold'>Gifts Cards</p>
@@ -44,7 +44,7 @@ export default function Settings() {
         <Link>
           <div className='tw-flex tw-justify-start tw-items-center tw-bg-white tw-border tw-py-3 tw-px-5 tw-rounded'>
             <div className='tw-mr-3'>
-              <img src="https://img.icons8.com/color/75/circled-user-male-skin-type-7--v1.png" alt="" className='tw-rounded-full' />
+              <img src="https://img.icons8.com/color/75/circled-user-male-skin-type-7--v1.png" alt="" className='tw-rounded-full' loading='lazy' />
             </div>
             <div>
               <p className='tw-text-gray-700 tw-font-semibold'>Your Profiles</p>

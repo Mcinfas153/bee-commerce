@@ -20,6 +20,8 @@ import Alert from './Alert';
 import ProductsPage from './product/ProductsPage';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Settings from './Settings';
+import ProfileSettings from './settings/ProfileSettings';
+import DownloadApp from './DownloadApp';
 
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
 
@@ -44,6 +46,12 @@ function App() {
                         </Route>
                         <Route path="/settings">
                             <Settings />
+                        </Route>
+                        <Route path="/profile-settings">
+                            <ProfileSettings />
+                        </Route>
+                        <Route path="/download-app">
+                            <DownloadApp />
                         </Route>
                         <ProtectedRoute path="/cart" component={ShoppingCart} />
                         <ProtectedRoute path="/my-account" component={MyAccount} />
