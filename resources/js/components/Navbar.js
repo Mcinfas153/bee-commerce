@@ -79,36 +79,36 @@ export default function Navbar() {
                     <Accordion className='tw-bg-white'>
                         <Accordion.Item eventKey="0" className='tw-border-bottom tw-py-0'>
                             <Accordion.Header className='tw-bg-white'><FontAwesomeIcon icon={faHashtag} className="tw-mr-1 tw-text-sm" /> Trending Categories</Accordion.Header>
-                            <Accordion.Body className='tw-bg-white p-0'>
+                            <Accordion.Body className='tw-bg-gray-100 p-0'>
                                 <a href="/category/3/products">
-                                    <li className='tw-list-none tw-px-8 tw-py-2 tw-border'><FontAwesomeIcon icon={faLaptop} className="tw-mr-1 tw-text-sm" /> Electronics</li>
+                                    <li className='tw-list-none tw-px-8 tw-py-2 tw-border-b tw-border-white'><FontAwesomeIcon icon={faLaptop} className="tw-mr-1 tw-text-sm" /> Electronics</li>
                                 </a>
                                 <a href="/category/4/products">
-                                    <li className='tw-list-none tw-px-8 tw-py-2 tw-border'><FontAwesomeIcon icon={faHome} className="tw-mr-1 tw-text-sm" /> Home Appliances</li>
+                                    <li className='tw-list-none tw-px-8 tw-py-2 tw-border-b tw-border-white'><FontAwesomeIcon icon={faHome} className="tw-mr-1 tw-text-sm" /> Home Appliances</li>
                                 </a>
                                 <a href="/category/4/products">
-                                    <li className='tw-list-none tw-px-8 tw-py-2 tw-border'><FontAwesomeIcon icon={faLeaf} className="tw-mr-1 tw-text-sm" /> Groceries</li>
+                                    <li className='tw-list-none tw-px-8 tw-py-2 tw-border-b tw-border-white'><FontAwesomeIcon icon={faLeaf} className="tw-mr-1 tw-text-sm" /> Groceries</li>
                                 </a>
                                 <a href="/category/5/products">
-                                    <li className='tw-list-none tw-px-8 tw-py-2 tw-border'><FontAwesomeIcon icon={faSnowman} className="tw-mr-1 tw-text-sm" /> Event Products</li>
+                                    <li className='tw-list-none tw-px-8 tw-py-2'><FontAwesomeIcon icon={faSnowman} className="tw-mr-1 tw-text-sm" /> Event Products</li>
                                 </a>
                             </Accordion.Body>
                         </Accordion.Item>
                     </Accordion>
                     <a href="/download-app">
-                        <li className='tw-list-none tw-px-5 tw-py-3 tw-border'><FontAwesomeIcon icon={faMobile} className="tw-mr-1 tw-text-sm" /> Dwonload Apps</li>
+                        <li className='tw-list-none tw-px-5 tw-py-3 tw-border'><FontAwesomeIcon icon={faMobile} className="tw-mr-2 tw-text-sm" />Download Apps</li>
                     </a>
                     <a href="/category/1/products">
-                        <li className='tw-list-none tw-px-5 tw-py-3 tw-border'><FontAwesomeIcon icon={faCoins} className="tw-mr-1 tw-text-sm" /> Profit with us</li>
+                        <li className='tw-list-none tw-px-5 tw-py-3 tw-border'><FontAwesomeIcon icon={faCoins} className="tw-mr-2 tw-text-sm" />Profit with us</li>
+                    </a>
+                    <a href="/user-informations">
+                        <li className='tw-list-none tw-px-5 tw-py-3 tw-border'><FontAwesomeIcon icon={faUserCircle} className="tw-mr-2 tw-text-sm" />User Informations</li>
                     </a>
                     <a href="/category/2/products">
-                        <li className='tw-list-none tw-px-5 tw-py-3 tw-border'><FontAwesomeIcon icon={faHeadphones} className="tw-mr-1 tw-text-sm" /> Customer Services</li>
-                    </a>
-                    <a href="/category/3/products">
-                        <li className='tw-list-none tw-px-5 tw-py-3 tw-border'><FontAwesomeIcon icon={faUserCircle} className="tw-mr-1 tw-text-sm" /> User Informations</li>
+                        <li className='tw-list-none tw-px-5 tw-py-3 tw-border'><FontAwesomeIcon icon={faHeadphones} className="tw-mr-2 tw-text-sm" />Customer Services</li>
                     </a>
                     <a href='/settings'>
-                        <li className='tw-list-none tw-px-5 tw-py-3 tw-border'><FontAwesomeIcon icon={faCog} className="tw-mr-1 tw-text-sm" /> Settings</li>
+                        <li className='tw-list-none tw-px-5 tw-py-3 tw-border'><FontAwesomeIcon icon={faCog} className="tw-mr-2 tw-text-sm" />Application Settings</li>
                     </a>
                 </Offcanvas.Body>
             </Offcanvas>
