@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCaretDown, faCog, faCoins, faDollarSign, faFemale, faFunnelDollar, faHashtag, faHeadphones, faHome, faLaptop, faLeaf, faMale, faMobile, faSearchDollar, faSnowman, faUserCircle, faVolleyballBall } from '@fortawesome/free-solid-svg-icons'
+import { faArrowCircleRight, faCaretDown, faChartLine, faCloud, faCog, faCoins, faFemale, faHashtag, faHeadphones, faHome, faLaptop, faLeaf, faMale, faMicrochip, faMobile, faSnowman, faUserCircle, faVolleyballBall, faWindowRestore } from '@fortawesome/free-solid-svg-icons'
 import { Offcanvas,Dropdown } from 'react-bootstrap'
 import { Accordion } from 'react-bootstrap';
 
@@ -81,16 +81,16 @@ export default function Navbar() {
                             <Accordion.Header className='tw-bg-white'><FontAwesomeIcon icon={faHashtag} className="tw-mr-1 tw-text-sm" /> Trending Categories</Accordion.Header>
                             <Accordion.Body className='tw-bg-gray-100 p-0'>
                                 <a href="/category/3/products">
-                                    <li className='tw-list-none tw-px-8 tw-py-2 tw-border-b tw-border-white'><FontAwesomeIcon icon={faLaptop} className="tw-mr-1 tw-text-sm" /> Electronics</li>
+                                    <li className='tw-list-none tw-px-10 tw-py-3 tw-border-b tw-border-white'><FontAwesomeIcon icon={faLaptop} className="tw-mr-1 tw-text-sm" /> Electronics</li>
                                 </a>
                                 <a href="/category/4/products">
-                                    <li className='tw-list-none tw-px-8 tw-py-2 tw-border-b tw-border-white'><FontAwesomeIcon icon={faHome} className="tw-mr-1 tw-text-sm" /> Home Appliances</li>
+                                    <li className='tw-list-none tw-px-10 tw-py-3 tw-border-b tw-border-white'><FontAwesomeIcon icon={faHome} className="tw-mr-1 tw-text-sm" /> Home Appliances</li>
                                 </a>
                                 <a href="/category/4/products">
-                                    <li className='tw-list-none tw-px-8 tw-py-2 tw-border-b tw-border-white'><FontAwesomeIcon icon={faLeaf} className="tw-mr-1 tw-text-sm" /> Groceries</li>
+                                    <li className='tw-list-none tw-px-10 tw-py-3 tw-border-b tw-border-white'><FontAwesomeIcon icon={faLeaf} className="tw-mr-1 tw-text-sm" /> Groceries</li>
                                 </a>
                                 <a href="/category/5/products">
-                                    <li className='tw-list-none tw-px-8 tw-py-2'><FontAwesomeIcon icon={faSnowman} className="tw-mr-1 tw-text-sm" /> Event Products</li>
+                                    <li className='tw-list-none tw-px-10 tw-py-3'><FontAwesomeIcon icon={faSnowman} className="tw-mr-1 tw-text-sm" /> Event Products</li>
                                 </a>
                             </Accordion.Body>
                         </Accordion.Item>
@@ -98,17 +98,36 @@ export default function Navbar() {
                     <a href="/download-app">
                         <li className='tw-list-none tw-px-5 tw-py-3 tw-border'><FontAwesomeIcon icon={faMobile} className="tw-mr-2 tw-text-sm" />Download Apps</li>
                     </a>
-                    <a href="/category/1/products">
+                    <a href="/sell-on-bee">
                         <li className='tw-list-none tw-px-5 tw-py-3 tw-border'><FontAwesomeIcon icon={faCoins} className="tw-mr-2 tw-text-sm" />Profit with us</li>
                     </a>
                     <a href="/user-informations">
                         <li className='tw-list-none tw-px-5 tw-py-3 tw-border'><FontAwesomeIcon icon={faUserCircle} className="tw-mr-2 tw-text-sm" />User Informations</li>
                     </a>
-                    <a href="/category/2/products">
+                    <a href="/customer-services">
                         <li className='tw-list-none tw-px-5 tw-py-3 tw-border'><FontAwesomeIcon icon={faHeadphones} className="tw-mr-2 tw-text-sm" />Customer Services</li>
                     </a>
                     <a href='/settings'>
                         <li className='tw-list-none tw-px-5 tw-py-3 tw-border'><FontAwesomeIcon icon={faCog} className="tw-mr-2 tw-text-sm" />Application Settings</li>
+                    </a>
+                    <Accordion className='tw-bg-white'>
+                        <Accordion.Item eventKey="0" className='tw-border-bottom tw-py-0'>
+                            <Accordion.Header className='tw-bg-white'><FontAwesomeIcon icon={faWindowRestore} className="tw-mr-2 tw-text-sm" /> Other Apps</Accordion.Header>
+                            <Accordion.Body className='tw-bg-gray-100 p-0'>
+                                <a href="https://crm.beeonline.xyz/" target={'blank'}>
+                                    <li className='tw-list-none tw-px-10 tw-py-3 tw-border-b tw-border-white'><FontAwesomeIcon icon={faChartLine} className="tw-mr-1 tw-text-sm" /> Bee CRM</li>
+                                </a>
+                                <a href="https://weather.beeonline.xyz/" target={'blank'}>
+                                    <li className='tw-list-none tw-px-10 tw-py-3 tw-border-b tw-border-white'><FontAwesomeIcon icon={faCloud} className="tw-mr-1 tw-text-sm" /> Bee Weather</li>
+                                </a>
+                                <a href="https://tech.beeonline.xyz/" target={'blank'}>
+                                    <li className='tw-list-none tw-px-10 tw-py-3 tw-border-b tw-border-white'><FontAwesomeIcon icon={faMicrochip} className="tw-mr-1 tw-text-sm" /> Bee Tech</li>
+                                </a>
+                            </Accordion.Body>
+                        </Accordion.Item>
+                    </Accordion>
+                    <a href='/'>
+                        <li className='tw-list-none tw-px-5 tw-py-3 tw-border'><FontAwesomeIcon icon={faArrowCircleRight} className="tw-mr-2 tw-text-sm" />Sign out</li>
                     </a>
                 </Offcanvas.Body>
             </Offcanvas>

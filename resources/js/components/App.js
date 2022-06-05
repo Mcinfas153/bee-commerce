@@ -23,6 +23,10 @@ import Settings from './Settings';
 import ProfileSettings from './settings/ProfileSettings';
 import DownloadApp from './DownloadApp';
 import UserProfile from './UserProfile';
+import SellOnBee from './SellOnBee';
+import StoreRegister from './StoreRegister';
+import LoginMyStore from './LoginMyStore';
+import CustomerServices from './CustomerServices';
 
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
 
@@ -38,6 +42,15 @@ function App() {
                     <Switch>
                         <Route exact path="/">
                             <Home />
+                        </Route>
+                        <Route path="/sell-on-bee">
+                            <SellOnBee />
+                        </Route>
+                        <Route path="/login-my-store">
+                            <LoginMyStore />
+                        </Route>
+                        <Route path="/register-my-store">
+                            <StoreRegister />
                         </Route>
                         <Route path="/login">
                             <Login />
@@ -56,6 +69,9 @@ function App() {
                         </Route>
                         <Route path="/user-informations">
                             <UserProfile />
+                        </Route>
+                        <Route path="/customer-services">
+                            <CustomerServices />
                         </Route>
                         <ProtectedRoute path="/cart" component={ShoppingCart} />
                         <ProtectedRoute path="/my-account" component={MyAccount} />
