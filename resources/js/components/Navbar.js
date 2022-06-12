@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowCircleRight, faCaretDown, faChartLine, faCloud, faCog, faCoins, faFemale, faHashtag, faHeadphones, faHome, faLaptop, faLeaf, faMale, faMicrochip, faMobile, faSnowman, faUserCircle, faVolleyballBall, faWindowRestore } from '@fortawesome/free-solid-svg-icons'
+import { faArrowCircleRight, faCaretDown, faChartLine, faCloud, faCog, faCoins, faFemale, faFile, faFileSignature, faHashtag, faHeadphones, faHome, faLaptop, faLeaf, faMale, faMicrochip, faMobile, faQuestionCircle, faSnowman, faUserCircle, faVolleyballBall, faWindowRestore } from '@fortawesome/free-solid-svg-icons'
 import { Offcanvas,Dropdown } from 'react-bootstrap'
 import { Accordion } from 'react-bootstrap';
 
@@ -126,6 +126,12 @@ export default function Navbar() {
                             </Accordion.Body>
                         </Accordion.Item>
                     </Accordion>
+                    <a href='/help'>
+                        <li className='tw-list-none tw-px-5 tw-py-3 tw-border'><FontAwesomeIcon icon={faQuestionCircle} className="tw-mr-2 tw-text-sm" />Get Help</li>
+                    </a>
+                    <a href='/privacy-policy'>
+                        <li className='tw-list-none tw-px-5 tw-py-3 tw-border'><FontAwesomeIcon icon={faFile} className="tw-mr-2 tw-text-sm" />Privacy Policy</li>
+                    </a>
                     <a href='/'>
                         <li className='tw-list-none tw-px-5 tw-py-3 tw-border'><FontAwesomeIcon icon={faArrowCircleRight} className="tw-mr-2 tw-text-sm" />Sign out</li>
                     </a>

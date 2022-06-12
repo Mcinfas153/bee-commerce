@@ -27,6 +27,7 @@ import SellOnBee from './SellOnBee';
 import StoreRegister from './StoreRegister';
 import LoginMyStore from './LoginMyStore';
 import CustomerServices from './CustomerServices';
+import PrivacyPolicy from './PrivacyPolicy';
 
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
 
@@ -72,6 +73,9 @@ function App() {
                         </Route>
                         <Route path="/customer-services">
                             <CustomerServices />
+                        </Route>
+                        <Route path="/privacy-policy">
+                            <PrivacyPolicy />
                         </Route>
                         <ProtectedRoute path="/cart" component={ShoppingCart} />
                         <ProtectedRoute path="/my-account" component={MyAccount} />
