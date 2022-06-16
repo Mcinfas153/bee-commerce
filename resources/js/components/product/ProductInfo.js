@@ -7,7 +7,7 @@ export default function ProductInfo(props) {
 
     function substraction() {
         let x = document.getElementById("demo").value;
-        if ( x > 1) {
+        if (x > 1) {
             x--;
             document.getElementById("demo").value = x;
         }
@@ -15,14 +15,36 @@ export default function ProductInfo(props) {
 
     function addition() {
         let x = document.getElementById("demo").value;
-        x++;
-        document.getElementById("demo").value = x;
+        if (10 > x) {
+            x++;
+            document.getElementById("demo").value = x;
+        }
+    }
+
+    function selectedColor1 () {
+        let x = document.getElementById("color1Button");
+        $(x).addClass('tw-border-2 tw-border-gray-400');
+    }
+
+    function selectedColor2 () {
+        let x = document.getElementById("color2Button");
+        $(x).addClass('tw-border-2 tw-border-gray-400');
+    }
+
+    function selectedColor3 () {
+        let x = document.getElementById("color3Button");
+        $(x).addClass('tw-border-2 tw-border-gray-400');
+    }
+
+    function selectedColor4 () {
+        let x = document.getElementById("color4Button");
+        $(x).addClass('tw-border-2 tw-border-gray-400');
     }
 
     const { title, description, price } = props.info;    
     return (
         <div className="productInfo">
-            <div className="tw-container tw-mx-auto tw-px-5 sm:tw-px-10">
+            <div className="tw-container tw-mx-auto tw-px-5 sm:tw-px-10 tw-pt-5">
                 <p className="tw-text-3xl tw-font-bold tw-text-gray-700 tw-my-3">{title}</p>
                 <hr className="tw-w-16 tw-mb-5" />
                 <p className="tw-text-gray-700 tw-my-3">
@@ -39,9 +61,9 @@ export default function ProductInfo(props) {
                     <p className="tw-text-2xl tw-font-bold tw-text-gray-300 tw-m-3">${price}</p>
                 </div>
                 
-                <div className="tw-flex tw-justify-start tw-items-center tw-mt-5 tw-mb-1">
+                <div className="tw-flex tw-justify-start tw-items-center tw-mt-5 tw-mb-3">
                     <div className="tw-col-span-1 tw-text-left tw-mr-5">
-                        <p className="tw-text-xl tw-font-semibold tw-text-gray-700">Prefferd Size:</p>
+                        <p className="tw-text-xl tw-font-semibold tw-text-gray-700">Ava. Size:</p>
                     </div>
                     <div className='tw-col-span-11'>
                         <Form className='tw-flex tw-justify-evenly tw-mt-1.5'>
@@ -51,15 +73,16 @@ export default function ProductInfo(props) {
                         </Form>
                     </div>
                 </div>
-                <div className="tw-flex tw-justify-start tw-items-center tw-mb-3">
+                <div className="tw-flex tw-justify-start tw-items-center tw-mb-4">
                     <div className="tw-col-span-1 tw-text-left tw-mr-5">
                         <p className="tw-text-xl tw-font-semibold tw-text-gray-700">Prefferd Color:</p>
                     </div>
                     <div className='tw-col-span-11'>
                         <Form className='tw-flex tw-justify-evenly tw-mt-1.5'>
-                            <Form.Check className='tw-mr-3 sm:tw-mr-5' type="radio" aria-label="Blue" label='Blue' size={'xl'} />
-                            <Form.Check className='tw-mr-3 sm:tw-mr-5' type="radio" aria-label="Red" label='Red' size={'xl'} />
-                            <Form.Check className='tw-mr-3 sm:tw-mr-5' type="radio" aria-label="Green" label='Green' size={'xl'} />
+                            <a className='tw-p-4 tw-bg-yellow-500 tw-rounded-full tw-mr-3' title='Yellow' id='color1Button' onClick={selectedColor1}></a>
+                            <a className='tw-p-4 tw-bg-green-500 tw-rounded-full tw-mr-3' title='green' id='color2Button' onClick={selectedColor2}></a>
+                            <a className='tw-p-4 tw-bg-blue-500 tw-rounded-full tw-mr-3' title='Blue' id='color3Button' onClick={selectedColor3}></a>
+                            <a className='tw-p-4 tw-bg-red-500 tw-rounded-full tw-mr-3' title='Red' id='color4Button' onClick={selectedColor4}></a>
                         </Form>
                     </div>
                 </div>
@@ -73,8 +96,7 @@ export default function ProductInfo(props) {
                             <input type="number" id='demo' value="1" className='tw-w-1/3 tw-text-center tw-bg-white' disabled='disabled' />
                             <button className='addButton tw-w-1/3 tw-text-medium tw-font-bold tw-text-start' onClick={addition}>+</button>
                         </div>
-                    </div>
-                    
+                    </div>  
                 </div>
                 <hr />
                 <Accordion>
@@ -95,6 +117,30 @@ export default function ProductInfo(props) {
                 <div className="lg:tw-flex lg:tw-justify-between tw-my-5">
                     <button className="tw-bg-yellow-300 tw-px-10 tw-py-3 tw-rounded-full hover:tw-bg-gray-700 tw-text-white tw-font-bold tw-m-2 tw-w-full lg:tw-w-auto tw-transition tw-duration-1000">Add to Wishlist</button>
                     <button className="tw-bg-gray-700 tw-px-10 tw-py-3 tw-rounded-full hover:tw-bg-yellow-300 tw-text-white tw-font-bold tw-m-2 tw-w-full lg:tw-w-auto tw-transition tw-duration-1000">Add to Compare</button>
+                </div>
+            </div>
+            <div className='tw-px-5 sm:tw-px-14'>
+                <div className='tw-py-10'>
+                    <Form>
+                        <p className='tw-text-xl tw-text-gray-700 tw-font-bold tw-my-5'>Write a Comment</p>
+                        <div className='tw-px-2'>
+                            <div className="tw-grid sm:tw-grid-cols-2 tw-gap-4">
+                                <Form.Group className="tw-mb-1">
+                                    <Form.Label className='tw-ml-1'>Name</Form.Label>
+                                    <Form.Control type="text" name='name' id='name' className='tw-rounded-none tw-bg-white' />
+                                </Form.Group>
+                                <Form.Group className="tw-mb-1">
+                                    <Form.Label className='tw-ml-1'>Email address</Form.Label>
+                                    <Form.Control type="email" className='tw-rounded-none tw-bg-white' />
+                                </Form.Group>
+                            </div>
+                            <Form.Group className="tw-mb-1">
+                                    <Form.Label className='tw-ml-1'>Message</Form.Label>
+                                    <Form.Control as="textarea" rows={4} className='tw-rounded-none tw-bg-white' />
+                            </Form.Group>
+                            <button className="tw-bg-gray-700 tw-px-10 tw-py-2 hover:tw-bg-yellow-300 tw-text-white tw-font-bold tw-my-5 tw-mx-auto tw-float-center lg:tw-float-right lg:tw-w-auto tw-transition tw-duration-1000">Submit</button>
+                        </div>
+                    </Form>
                 </div>
             </div>
         </div>
