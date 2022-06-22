@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react'
 import CategoryBar from './category/CategoryBar'
 import CategoryBox from './category/CategoryBox'
-import CategoryIcon from './category/CategoryIcon'
-import OfferProduct from './product/OfferProduct';
 import { listCategories } from './admin/store/actions/CategoryActions';
 import { connect } from 'react-redux';
 import ProductRow from './product/ProductRow';
@@ -69,7 +67,7 @@ export function Home(props) {
                     <CategoryCard name="Electronics" id="4" />
                 </div>
             </div>
-            <div>
+            <div className="tw-my-20 tw-mx-10 ">
                 <Instagram />
             </div>
         </div>

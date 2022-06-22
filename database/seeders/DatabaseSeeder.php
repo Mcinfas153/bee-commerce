@@ -6,6 +6,7 @@ use App\Models\Order;
 use App\Models\Product;
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use App\Models\Comment;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,6 +21,7 @@ class DatabaseSeeder extends Seeder
         $this->call(CategorySeeder::class);
         $this->call(OrderSeeder::class);
         $this->call(ProductSeeder::class);
-        $this->call(OrderProductSeeder::class);
+
+        Comment::factory(10)->create();
     }
 }
